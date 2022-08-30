@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" />
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#example').DataTable({
+			dom : 'Bfrtip',
+			buttons : [ {
+				extend : 'excel',
+				text : 'Excel',
+				className : 'exportExcel',
+				filename : 'Test_Excel',
+				exportOptions : {
+					modifier : {
+						page : 'all'
+					}
+				}
+			}, {
+				extend : 'pdf',
+				text : 'PDF',
+				className : 'exportExcel',
+				filename : 'Test_Pdf',
+				exportOptions : {
+					modifier : {
+						page : 'all'
+					}
+				}
+
+			}, {
+				extend : 'copy',
+				text : 'Copy ',
+				className : 'exportExcel',
+				exportOptions : {
+					modifier : {
+						modifier : {
+							page : 'current'
+						}
+					}
+				}
+			}, {
+				extend : 'csv',
+				text : 'csv ',
+				exportOptions : {
+					modifier : {
+						search : 'none'
+					}
+				}
+			} ]
+		});
+
+	});
+</script>
+
+<style>
+fieldset {
+	background-color: #f9f9f9;
+}
+
+legend {
+	background-color: lightgreen;
+	color: black;
+	padding: 3px 10px;
+}
+
+input {
+	margin: 5px;
+}
+</style>
+
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+</head>
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<span><a th:href="@{/customerLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+				<section class="sidebar">
+<div class="sidebar-wrap">
+<div class="Heading">
+<h4>Dashboard</h4>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/appointment-form.png" alt=" icon" class="img-fluid" />
+ <a th:href="@{/review/{customerID}(customerID=${customerID})}">Book Appointment</a> 
+<!-- <a th:href="@{/review}">Appointments</a> -->
+</div>
+
+
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.jpg" alt="icon"
+class="img-fluid" />  <a th:href="@{/subscription/{customerID}(customerID=${customerID})}" >Subscribe Now</a>
+                               </div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.png" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/selectStore/{customerID}(customerID=${customerID})}" class="active">Rate our Employee</a>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/rate employee.jpg" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/updatedProfile/{customerID}(customerID=${customerID})}">Customer Profile</a>
+</div>
+</div>
+</section>
+					<!-- sidebar end -->
+				</div>
+
+				<!-- header -->
+
+
+
+
+
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+						<div class="page-heading">
+							<h1 align="center">Appointment Details Confirmation :</h1>
+						</div>
+
+
+
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form th:object="${customerAppointment1}">
+
+
+									<input type="hidden" class="form-control" id="appointmentID"
+										name="appointmentID" th:value="*{appointmentID}" />
+
+									
+										<input type="hidden" class="form-control" id="customerID"
+											name="customerID" placeholder="Full customerID"
+											th:value="${customerAppointment.customerID}" />
+									
+
+									<fieldset>
+										<legend><strong>Your Personal Details :</strong></legend>
+
+										<div class="col-sm-2">
+											<label for="customerName"> Customer Name </label> <input
+												type="text" class="form-control" id="customerName"
+												name="customerName" placeholder="Full Name"
+											 th:value="${customerAppointment.customerName}"
+												th:readonly="true" style="color: black;font-size:18px"/>
+										</div>
+
+										<div class="col-sm-2">
+											<label for="gender">Customer Gender</label> <input
+												type="text" class="form-control" id="gender" name="gender"
+												placeholder="Full Name"
+												th:value="${customerAppointment.gender}" th:readonly="true" style="color: black;font-size:18px" />
+										</div>
+
+										<div class="col-sm-2">
+											<label for="customerMobile">Customer Mobile</label> <input
+												type="number" class="form-control" id="customerMobile"
+												name="customerMobile" placeholder="customerMobile"
+												th:value="${customerAppointment.customerMobile}"
+												th:readonly="true" style="color: black;font-size:18px" />
+										</div>
+
+										<div class="col-sm-3">
+											<label for="customerEmailID">Customer EmailID</label> <input
+												type="text" class="form-control" id="customerEmailID"
+												name="customerEmailID" placeholder="Your Email"
+												th:value="${customerAppointment.customerEmailID}"
+												th:readonly="true" style="color: black;font-size:18px" />
+										</div>
+
+										<div class="col-sm-2">
+											<label for="customerLocation">Customer Location</label> <input
+												type="text" class="form-control" id="customerLocation"
+												name="customerLocation" placeholder="customerLocation"
+												th:value="${customerAppointment.customerLocation}"
+												th:readonly="true" style="color: black;font-size:18px" />
+										</div>
+
+									</fieldset>
+									<br>
+									
+
+
+
+									<fieldset>
+										<legend><strong> Your Booking Details : </strong></legend>
+
+										<div class="col-md-3 col-sm-3">
+											<label for="appointmentBookedDate">Appointment Booked
+												On </label> <input type="text" class="form-control"
+												id="appointmentBookedDate" name="appointmentBookedDate"
+												th:value="*{appointmentBookedDate}" th:readonly="true" style="color: black;font-size:18px" />
+										</div>
+
+										<div class="col-sm-3">
+											<label for="storeName"> Appointment Booked in the
+												Store</label><input type=text class="form-control" id="storeName"
+												name="storeName" th:value="*{storeName}" th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+										<div class="col-sm-3">
+											<label for="branchName"> Appointment Booked at the Branch</label><input type=text class="form-control" id="branchName"
+												name="branchName" th:value="*{branchName}"
+												th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+
+
+										<div class="col-md-3 col-sm-3">
+											<label for="appointmentDate"> Appointment Booked for</label>
+											<input type="text" class="form-control" id="appointmentDate"
+												name="appointmentDate" th:value="*{appointmentDate}"
+												th:readonly="true" style="color: black;font-size:18px"/>
+										</div>
+
+									</fieldset>
+									<br>
+
+
+
+
+
+									<fieldset>
+										<legend><strong> Details of the Services Booked : </strong></legend>
+
+										<div class="col-md-4">
+											<label for="careName"> Name of each Service </label> <input
+												type=text class="form-control" id="careName" name="careName"
+												th:value="*{careName}" th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+
+										<div class="col-md-4">
+											<label for="careType"> Type of each Service </label> <input
+												type=text class="form-control" id="careType" name="careType"
+												th:value="*{careType}" th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+										<div class="col-md-4">
+											<label for="careCategory"> Category of each Service </label>
+											<input type=text class="form-control" id="careCategory"
+												name="careCategory" th:value="*{careCategory}"
+												th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+										<div class="col-md-4">
+											<label for="carePrice"> Price for each Service (In Rupees)</label> <input
+												type=text class="form-control" id="carePrice"
+												name="carePrice" th:value="*{carePrice}" th:readonly="true" style="color: black;font-size:18px">
+										</div>
+
+										<div class="col-md-4">
+											<label for="careDuration"> Estimated Duration for
+												each Service (In mins)</label> <input type=text class="form-control"
+												id="careDuration" name="careDuration"
+												th:value="*{careDuration}" th:readonly="true" style="color: black;font-size:18px">
+										</div>
+		</fieldset>
+								</form>
+								
+								<div class="col-md-4">
+										<a th:href="@{/bills/{appointmentID}(appointmentID=${appID})}" class="wow fadeInUp">Next </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+

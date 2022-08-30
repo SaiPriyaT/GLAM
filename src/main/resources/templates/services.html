@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('#example').DataTable({
+dom: 'Bfrtip',
+buttons: [{
+extend: 'excel',
+text: 'Excel',
+className: 'exportExcel',
+filename: 'Test_Excel',
+exportOptions: { modifier: { page: 'all'} }
+},
+{
+extend: 'pdf',
+text: 'PDF',
+className: 'exportExcel',
+filename: 'Test_Pdf',
+exportOptions: { modifier: { page: 'all'} }
+
+},
+     { extend: 'copy',
+            text: 'Copy ',
+            className: 'exportExcel',
+            exportOptions: { modifier: { modifier: {    page: 'current'} }  }     
+            },
+{
+extend: 'csv',
+text: 'csv ',
+exportOptions: {
+modifier: {
+search: 'none' } } 
+}]
+});
+
+});
+</script>
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/../../css/final.css" />
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+
+
+
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<br> <br> <font size='20' face='Freestyle Script'
+					color='black'><h1 th:text="${session.adminObj}"></h1></font> <span><a
+					th:href="@{/adminLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+				
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="/../../images/Icons/store.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+	<div class="sidebar-item">
+								<img src="/../../images/Icons/domain.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/domainForm}">Add Domains</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="/../../images/Icons/service.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}" class="active">Services</a>
+							</div>
+							
+	<div class="sidebar-item">
+								<img src="/../../images/Icons/combo.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/combolist}">Combos</a>
+							</div>
+							<div class="sidebar-item">
+                                <img src="../images/Icons/inventory.png" alt="icon" class="img-fluid" />
+                                <a th:href="@{/productCategoryList}">Inventory</a>
+
+                            </div>
+                                <div class="sidebar-item">
+                                <img th:src="@{images/Icons/subscription.png}" alt="icon"
+                                    class="img-fluid" /> <a th:href="@{/subscribersList}">Subscriptions</a>
+                            </div>
+                            
+                            <div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/vendordetails}">
+									Vendors</a>
+							</div>
+									<div class="sidebar-item">
+								<img src="/../../images/Icons/news.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/newsdetails}">Latest
+									News</a>
+								<!--/{id}(id=${newsID}) -->
+							</div>
+							<div class="sidebar-item">
+								<img src="/../../images/Icons/customer.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="/../../images/Icons/openings.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/openingsList}">Openings
+									List</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/network}">Social
+									Network</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="/../../images/Icons/aboutus.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/about}">About us</a>
+							</div>
+							
+							<!-- <div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${session.adminID})}">Admin Profile</a>
+							</div> -->
+
+						</div>
+					</section>
+				
+				</div>
+		
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+				
+						<div class="page-heading">
+							<h1 align="center">Services</h1>
+
+
+						</div>
+			<div  class="form-box">
+                 <marquee behavior="scroll" direction="right"><strong th:text="${msg}"> </strong> </marquee>
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<div align="right">
+				<!-- <form method="post">
+						<input id="sendTo" type="email" placeholder="Send to" >
+						<input id="message"  placeholder="Message" >
+			
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  -->
+									<a th:href="@{/addService}" class="btn btn-accept">Add
+										Service</a>
+								</div>
+								<table class="table table-bordered table-striped" id="example"
+									style="background-color: #e6e6fa; color: black; border-radius: 10px">
+									<thead>
+										<tr>
+											<th>Service Name</th>
+											<th>Service Type</th>
+											<th>Service Category</th>
+											<th>Service Price</th>
+											<th>Store Name</th>
+											<th>Care Description</th>
+											<th>Service Image</th>
+											<th>Actions</th>
+
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="ourCare: ${ourCare}">
+											<td th:text="${ourCare.careName}"></td>
+											<td th:text="${ourCare.careType}"></td>
+											<td th:text="${ourCare.careCategory}"></td>
+											<td th:text="${ourCare.carePrice}"></td>
+											<td th:text="${ourCare.storeName}"></td>
+											<td th:utext="${ourCare.careDescription}"></td>
+											<td scope="row"><img alt=""
+												th:src="*{'data:data/jpg;base64,'+{ourCare.data}}"
+												style="width: 100px; height: 100px;"></td>
+											<td><span>
+													<ul class="main-navigation">
+														<li><a href="#">Actions</a>
+															<ul>
+																<li><a
+																	th:href="@{/updateService/{careID}(careID=${ourCare.careID})}">Update</a></li>
+																<li><a
+																	th:href="@{/deleteService/{careID}(careID=${ourCare.careID})}">Delete</a></li>
+															</ul></li>
+													</ul>
+											</span></td>
+										</tr>
+									</tbody>
+
+								</table></div></div></div></div></div></div>
+								
+								</main>
+
+<!-- 
+							</div>
+
+						</div>
+						
+						<form method="post">
+						<input id="sendTo" type="email" placeholder="Send to" >
+						<input id="message"  placeholder="Message" >
+			
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+						<a href="https://web.whatsapp.com/send?text=Hi ra" data-action="share/whatsapp/share">Share via Whatsapp web</a>
+						$email = 'mailto:?subject=' . $[post-title] . '&body=Check out this site: '. $[post-url] .'" title="Share by Email';
+						
+					<span>	<img
+							src="https://image.freepik.com/free-vector/whatsapp-icon-design_23-2147900927.jpg"
+							height="50" size="50" onclick="openWhatsApp()"></span>
+							
+							
+				
+						<script async defer crossorigin="anonymous"
+							src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0"
+							nonce="tP3BA0IQ"></script>
+					<span class="fb-share-button"
+							data-href="https://developers.facebook.com/docs/plugins/"
+							data-layout="button" data-size="large">
+							<a target="_blank"
+								href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+								class="fb-xfbml-parse-ignore"> Share </a>
+						
+						
+						</span>
+						     <div>
+          <h3>whatsapp</h3>
+            <h6>add number without space like 917272912606 not <strike>+91 (727) 2912606 </strike></h6>
+  <input id="number" type="numric" placeholder="phone 966506666666" >
+   <input id="name" type="text" placeholder="name" >
+   <input id="msg" type="text" placeholder="type msg" >
+<button onclick="send_handle()">send</button></div>
+					</div>
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</main>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+	<script type="text/javascript">
+	
+	function sendEmail(){
+	var sendTo = document.getElementById("sendTo").value;
+	var message = document.getElementById("message").value;
+
+	alert(sendTo);
+	Email.send({
+    SecureToken : "71ac6b82-1a44-4c79-a190-da13cbd5ca34",
+    To : sendTo ,
+    From : "bandarurajeswarrao3@gmail.com",
+    Subject : "This is the subject",
+    Body : message
+}).then(
+  message => alert(message)
+);
+}
+	
+	</script>
+	<!-- <script type="text/javascript">
+	
+	function send_handle(){
+
+  let num=document.getElementById("number").value;
+
+  let msg= document.getElementById("msg").value;
+
+    let name= document.getElementById("name").value;
+  
+  var win = window.open(`https://wa.me/${num}?text=Hello%20${name}%20${msg}`, '_blank');
+ // win.focus();
+}
+	</script> -->
+
+
+</body>
+</html>

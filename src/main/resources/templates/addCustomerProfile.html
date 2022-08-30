@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Glam customer Portal-addProfile</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+<style>
+fieldset {
+	background-color: #f9f9f9;
+}
+
+legend {
+/* 	background-color: lightgreen;
+ */	color: black;
+	padding: 3px 10px;
+}
+
+input {
+	margin: 5px;
+}
+</style>
+
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h1>Glam</h1>
+				<h3 th:text="${session.CustomerObject}"></h3>
+				<div>
+					<a href="/customerLogout">Logout</a>
+				</div>
+			</div>
+	</header>
+	<!-- header end -->
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+				<!-- main area -->
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+					
+						<!-- page Heading -->
+						<div class="page-heading">
+							<h1>customer Profile</h1>
+						</div>
+						<!-- page Heading End -->
+
+						<!-- abailablility -->
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form
+									th:action="@{/UploadCustomerProfile/{customerID}(customerID=${customerID} )}"
+									method=post th:object="${CustomerObject}" class="form-box">
+<fieldset>
+									  <legend>
+                                        <button   style= "text-align:left ; color:black"  class ="btn btn-danger btn-block"> Your Registration Details :</button>
+                                        </legend>
+									<div class="col-md-6">
+										<label for="customerId"></label> <input type="hidden"
+											class="form-control" id="customerID" name="customerID"
+											th:value="*{customerID}" th:readonly="true" />
+									</div>
+									<div class="col-md-12 col-sm-12">
+										 <input
+											type="hidden" class="form-control" id="password"
+											name="password" th:value="*{password}" th:readonly="false" />
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<label for="customerName">Customer Name</label> <input
+												type="text" class="form-control" id="customerName"
+												name="customerName" th:value="*{customerName}"
+												/>
+										</div>
+										<div class="col-md-6">
+											<label for="customerEmailID">Email</label> <input
+												type="email" class="form-control" id="customerEmailID"
+												name="customerEmailID" th:value="*{customerEmailID}"
+												th:readonly="true" required/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<label for="customerMobile">Phone Number</label> <input
+												type="tel" class="form-control" id="customerMobile"
+												name="customerMobile" th:value="*{customerMobile}"
+												 />
+										</div>
+									</div>
+									
+								<!-- 	<input type="hidden"
+                                                class="form-control" id="subscriberID" name="subscriberID"
+                                                 th:value="1"
+                                            /> -->
+									
+								
+
+
+									<!--  <h2>Please enter and upload the information needed given below</h2> -->
+
+									<div class="row">
+										<div class="col-md-6">
+											<label for="customerLocation">Enter your location</label> <input
+												type="text" class="form-control" id="customerLocation"
+												name="customerLocation" placeholder="Current Location" th:value="*{customerLocation}"
+												required="required" />
+										</div>
+										<!-- <div class="col-md-6">
+											<label for="gender">Enter your gender</label> <input
+												type="text" class="form-control" id="gender" name="gender"
+												th:value="*{gender}" required="required" />
+										</div>
+									</div> -->
+									
+									
+									
+									
+                                    <div class="col-md-6">
+                                            <label for="avl">Gender*</label>
+                                            <div>
+                                                <select class="form-control" id="gender"
+                                                    name="gender" th:field="*{gender}"
+                                                    required="required">
+                                                    <option th:value="Male" th:text="Male"></option>
+                                                    <option th:value="Female" th:text="Female"></option>
+                                                    
+
+
+                                                </select>
+                                            </div>
+                                     
+                                        </div>
+									
+								
+
+									
+											<label for=""></label>
+											<button style="color: black" class="btn btn-danger btn-block">
+												<!--  Upload Your Profile-->
+												Update
+											</button>
+										
+									</fieldset>
+								</form>
+							</div>
+						</div>
+
+						<!-- abailablility -->
+					</div>
+				</div>
+			</div>
+			<!-- main area end -->
+		</div>
+	</main>
+
+	<!-- SCRIPTS -->
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script> -->
+</body>
+</html>

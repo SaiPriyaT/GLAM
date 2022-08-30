@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+
+<style>
+
+body {
+   background-image: url("/images/store2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} 
+</style>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="./css/final.css" />
+</head>
+
+
+
+<body>
+<!-- header -->
+<header class="header">
+<div class="container-fluid">
+<div class="header-box">
+<h4>GLAM</h4><br><br>
+<font size='20'face='Freestyle Script'color='black'></font>
+
+<h1 Hello! th:text="${session.Name}"></h1><span><a th:href="@{/logout}">LogOut</a></span>
+
+
+<!-- <a th:href="@{/stud/logout}" class="btn btn-danger">logout</a>
+ --></div>
+</div>
+</header>
+<main class="main">
+<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+						<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+							
+							<div class="sidebar-item">
+								<img src="../images/Icons/attendance.png" alt="icon"
+									class="img-fluid" /> <a
+								th:href="@{/preAttendanceForm/{empID}(empID=${empID})}">Attendance</a>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/editemp.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/updateEmpProfile/{empID}(empID=${empID})}">Edit Your Profile</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/editemp.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/updatedEmpProfile/{empID}(empID=${empID})}">View Your Profile</a>
+							</div>
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+<!-- header -->
+
+<!-- main area -->
+<div class="col-xl-10 col-lg-9 col-md-8">
+<div class="main-area">
+<!-- page Heading -->
+<div class="page-heading">
+
+ <div>
+  <div class="col-md-6 col-sm-6">
+								<!-- <label for="employeeId">EmployeeID</label> --> <input type="hidden"
+									class="form-control" id="employeeId" name="employeeId"
+									th:value="*{employeeId}" th:readonly="true" />
+							</div>
+ </div>
+
+<br><br>
+<br>
+      
+                    </div>
+                    <div  class="action-box">
+                    <!--   <span class="date">15 Sept 2020 12:30PM</span> -->
+<!--                      <button style="background-color:rgb(1, 197, 162, 0.2);color:black;border-radius:5px"><a  style="color: black" th:href="@{/storeList}"  >Show Stores</a></button>
+ -->
+
+
+</div></div>
+</div></div></main>
+
+</body>
+</html>

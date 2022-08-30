@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+
+<style>
+
+body {
+background-image: url("/images/store2.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+</style>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/../css/final.css" />
+</head>
+
+<body>
+<!-- header -->
+<header class="header">
+<div class="container-fluid">
+<div class="header-box">
+<h4>GLAM</h4>
+<h2 th:text="${session.CustomerObject}"></h2>
+<br><br>
+<font size='20'face='Freestyle Script'color='black'></font>
+<span><a th:href="@{/adminLogout}">LogOut</a></span>
+<!-- <a href="/logout">Logout</a>
+ -->
+</div>
+</div>
+</header>
+<main class="main">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xl-2 col-lg-3 col-md-4">
+<!-- sidebar -->
+<section class="sidebar">
+<div class="sidebar-wrap">
+<div class="Heading">
+<h4>Dashboard</h4>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/appointment-form.png" alt=" icon" class="img-fluid" />
+ <a th:href="@{/review/{customerID}(customerID=${customerID})}">Book Appointment</a> 
+<!-- <a th:href="@{/review}">Appointments</a> -->
+</div>
+
+
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.jpg" alt="icon"
+class="img-fluid" />  <a th:href="@{/subscription/{customerID}(customerID=${customerID})}" >Subscribe Now</a>
+                               </div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.png" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/selectStore/{customerID}(customerID=${customerID})}" class="active">Rate our Employee</a>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/rate employee.jpg" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/updatedProfile/{customerID}(customerID=${customerID})}">Customer Profile</a>
+</div>
+</div>
+</section>
+<!-- sidebar end -->
+</div>
+<!-- header -->
+<!-- main area -->
+<div class="col-xl-10 col-lg-9 col-md-8">
+<div class="main-area">
+<!-- page Heading -->
+<div class="form-box">
+
+<div class="avaliability-box">
+<div class="page-heading">
+<div>
+ <span ><h1>Welcome</h1></span>
+</div> 
+<!-- <div class="action-box" th:if="${/adminprof/{id}(id=${adminID}}">
+<h1>registered successfully </h1>
+</div>
+/* If the product has no image, display default Image. */
+<div class="img-container" th:unless="${product.image}">
+<h1>Welcome</h1>
+</div> -->
+</div>
+<br><br>
+<br>
+</div>
+<div class="action-box">
+<!-- <span class="date">15 Sept 2020 12:30PM</span> -->
+<!-- <button style="background-color:rgb(1, 197, 162, 0.2);color:black;border-radius:5px"><a style="color: black" th:href="@{/storeList}" >Show Stores</a></button>
+-->
+</div></div>
+</div></div></main>
+</body>
+</html>

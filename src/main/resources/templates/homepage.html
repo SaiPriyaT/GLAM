@@ -1,0 +1,1096 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<meta charset="ISO-8859-1">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="css/owl.carousel.css" />
+<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+<!-- slick slider -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script th:src="@{js/captcha.js}"></script>
+
+<title>Google Map Location</title>
+<style>
+#map {
+	height: 100%;
+}
+
+/*
+* Optional: Makes the sample page fill the window.
+*/
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
+
+</head>
+
+<body onload="GenerateCaptcha();" style="background-color: black;"
+	id="top" data-spy="scroll" data-target=".navbar-collapse"
+	data-offset="50">
+	<!-- PRE LOADER -->
+
+	<!-- MENU -->
+	<section class="navbar navbar-default navbar-static-top"
+		role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<!-- lOGO TEXT HERE -->
+				<a th:href="@{/}" class="navbar-brand">GLAM</a>
+			</div>
+			<!-- MENU LINKS -->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about" class="smoothScroll">About Us</a></li>
+					<li><a href="#jobVacancies" class="smoothScroll">Job Vacancies</a></li>
+					<li><a href="#team" class="smoothScroll">Our Services </a></li>
+					<li><a href="#stores" class="smoothScroll">Our Stores</a></li>
+
+
+					<li class="login-btn">
+						<!-- data-toggle="modal" data-target="#flipFlop" --> <a href=""
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">Login/Register<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><b class="top-bo">Employee</b></li>
+							<li><a href="#" data-toggle="modal"
+								data-target="#flipFlopEmployeeR">Register</a></li>
+							<li><a href="#" data-toggle="modal"
+								data-target="#flipFlopEmployeeS">Sign-in</a></li>
+							<li><b class="top-bo">Customer</b></li>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopPatientSignup">Register </a></li>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopPatientLogin">Sign-in</a></li>
+							<li><b class="top-bo">Admin</b></li>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopStoreAdminR">Register </a></li>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopStoreAdminS">Sign-in</a></li>
+
+
+						</ul>
+					</li>
+					<li class="appointment-btn"><a href=""
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">Book appointment<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+						
+							<li><b class="top-bo">Customer</b></li>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopPatientSignup">Register </a></li><br>
+							<li><a href="" data-toggle="modal"
+								data-target="#flipFlopPatientLogin">Sign-in</a></li>
+					
+
+
+						</ul>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</section>
+	<!-- HOME -->
+	<section id="home" class="slider" data-stellar-background-ratio="0.5">
+	<div class="caption">
+              <marquee style=color:red;font-size:20px; behavior="scroll" direction="left"><span th:text="${error}"></span> <span th:text="${errormsg3}"></span>
+			<span th:text="${errormsg2}"></span> <span th:text="${errormsg1}"></span></marquee>
+        </div>
+		<!-- <div style="color: red">
+			<span th:text="${error}"></span> <span th:text="${errormsg3}"></span>
+			<span th:text="${errormsg2}"></span> <span th:text="${errormsg1}"></span>
+		</div> -->
+		<div class="container">
+			<div class="row">
+				<div class="owl-carousel owl-theme">
+					<div class="item item-first">
+						<div class="caption">
+							<div class="col-md-offset-1 col-md-10">
+							<!-- 	<a href="#team" class="section-btn btn btn-default smoothScroll">Book
+									Our Specialist</a> -->
+								<h3>Let's make your life happier</h3>
+								<h1>Beauty Living</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ABOUT -->
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="about-info">
+						<!-- <h2 class="wow fadeInUp" data-wow-delay="0.6s">Why Us?</h2> -->
+						<div class="wow fadeInUp" data-wow-delay="0.8s">
+							<ul class="about-ul" th:each="aboutObj:${aboutlist}">
+								<font size="50" color='white'>
+
+									<li>
+										<h2>
+
+											<div th:text="${aboutObj.header}"></div>
+										</h2>
+										<p>
+										<div th:utext="${aboutObj.description}"></div>
+										</p>
+								</li>
+							</ul>
+							</font>
+						</div>
+						<figure class="profile wow fadeInUp" data-wow-delay="1s">
+							<!--      <img src="images/author-image.jpg" class="img-responsive" alt="" /> -->
+							<figcaption></figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="team" data-stellar-background-ratio="1"
+		class="team-section">
+		<div class="container">
+			<div class="about-info">
+				<h2 class="wow fadeInUp" align="center" data-wow-delay="0.1s">
+					Services</h2>
+			</div>
+			<div class="clearfix"></div>
+			<div class="slider-whole-box">
+				<div align="center" class="slider-box">
+					<!-- slider -->
+					<div th:each="careObj : ${list}">
+						<div class="slider-self">
+							<div class="slider-inside-box">
+								<div class="news-thumb wow fadeInUp" data-wow-delay="0.2s">
+									<div class="team-info">
+										<h3>
+											<a th:href="@{/userservices/{careType}(careType=${careObj})}"
+												th:text="${careObj}"></a>
+										</h3>
+										<span class="plus-box"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="stores" data-stellar-background-ratio="1"
+		class="team-section">
+		<div class="container">
+			<div class="about-info">
+				<h2 class="wow fadeInUp" align="center" data-wow-delay="0.1s">
+					Stores</h2>
+			</div>
+			<div class="clearfix"></div>
+			<div class="slider-whole-box">
+				<div align="center" class="slider-box">
+					<!-- slider -->
+					<div th:each="store : ${objStore}">
+						<div class="slider-self">
+							<div class="slider-inside-box">
+								<div class="news-thumb wow fadeInUp" data-wow-delay="0.2s">
+									<div class="team-info">
+										<h3>
+											<a
+												th:href="@{/userstorelist/{storeID}(storeID=${store.storeID})}"
+												th:text="${store.storeName}"></a>
+										</h3>
+										<span class="plus-box"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- TEAM -->
+	<section id="jobVacancies" data-stellar-background-ratio="1">
+		<div class="container">
+			<div class="about-info">
+				<h2 class="wow fadeInUp" align="center" data-wow-delay="0.1s">
+					Job Vacancies</h2>
+			</div>
+			<div class="clearfix"></div>
+			<div class="slider-whole-box">
+				<div align="center" class="slider-box">
+					<!-- 	slider -->
+					<div th:each="jobObj : ${openingsList}">
+						<div class="slider-self">
+							<div class="slider-inside-box">
+								<div class="news-thumb wow fadeInUp" data-wow-delay="0.2s">
+									<div class="team-info">
+										<h3>
+											<a
+												th:href="@{/jobDescription/{positionID}(positionID=${jobObj.positionID})}"
+												th:text="${jobObj.positionName}"></a>
+										</h3>
+										<h style="margin-left: 20px; font-weight: 600;"> Salary: <Strong
+											th:text="${jobObj.Salary}"></Strong> </h>
+										Per Month <br>
+										<h style="margin-left: 20px; font-weight: 600;">
+										Experience Required: <Strong th:text="${jobObj.Experience}"></Strong></h>
+										Years <br>
+	<span class="plus-box"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="team" data-stellar-background-ratio="1"
+		class="team-section">
+		<div class="container">
+			<div class="about-info">
+				<h2 class="wow fadeInUp" align="center" data-wow-delay="0.1s">
+					Latest News</h2>
+			</div>
+			<div class="clearfix"></div>
+			<div class="slider-whole-box">
+				<div align="center" class="slider-box">
+					<!-- first slider -->
+					<div th:each="empObj : ${latestService}">
+						<div class="slider-self">
+							<div class="slider-inside-box">
+								<div class="news-thumb wow fadeInUp" data-wow-delay="0.2s">
+									<div class="team-info">
+										<img alt=" " th:src="*{'data:data/jpg;base64,'+{empObj.data}}"
+											style="width: 100px; height: 100px;">
+
+										<h3>
+											<a th:href="@{/news/{newsID}(newsID=${empObj.newsID})}"
+												th:text="${empObj.newsItems}"></a>
+										</h3>
+				</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- FOOTER -->
+	<footer data-stellar-background-ratio="5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="footer-thumb">
+						<h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+						<tr th:each="store : ${objStore}">
+							<div class="contact-info">
+								<h3>
+								
+								</h3>
+								<br>
+								<p>
+									<i class="fa fa-phone"></i> &nbsp;&ensp;<span
+										th:text="${store.adminMobile}"></span>
+								</p>
+								<p>
+									<i class="fa fa-envelope-o"></i> &nbsp;&ensp;<span
+										th:text="${store.adminEmail}"></span>
+								</p>
+							</div>
+					</div>
+				</div>
+						<div class="col-md-4 col-sm-4">
+					<div class="footer-thumb">
+						<div class="opening-hours">
+							<h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours
+							</h4>
+							<!-- 	<h3>HI</h3> -->
+							<table>
+								<tr th:each="store : ${objStore}">
+									<span th:utext="${store.description}"></span>
+								</tr>
+							</table>
+						</div>
+						<table class="social-icon">
+
+							<tr th:each="netObj : ${networkList}">
+
+								<a th:href="${netObj.networkLink}"><img
+									style="width: 30px; height: 30px;"
+									th:src="*{'data:icon/jpeg;base64,'+{netObj.icon}}"
+									class="fa fa-facebook-square" attr="facebook icon">&emsp;
+								</a>
+							</tr>
+						</table>
+						<span class="store-btn">
+							<table th:each="store : ${objStore}">
+
+								<a th:href="${store.storeLink}"> <img
+									src="./images/google.png" alt="google play button"
+									class="img-responsive">
+								</a>
+								<a th:href="${store.appStoreLink}"> <img
+									src="./images/apple.png" alt="apple stoer button"
+									class="img-responsive">
+								</a>
+
+							</table>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 col-sm-12 border-top">
+			<div class="col-md-4 col-sm-6">
+				<div class="copyright-text">
+					<p>
+						Copyright &copy; 2017 Your Company | Design: <a
+							href="http://www.#.com" target="_parent">#</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="footer-link">
+					<a href="#">Laboratory Tests</a> <a href="#">Departments</a> <a
+						href="#">Insurance Policy</a> <a href="#">Careers</a>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-2 text-align-center">
+				<div class="angle-up-btn">
+					<a href="#top" class="smoothScroll wow fadeInUp"
+						data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</footer>
+
+	<div class="modal fade" id="flipFlopEmployeeR" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Register Now</h4>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/verificationEmp}" method=post
+						th:object="${EmpObj}" class="modal-form">
+						<div class="col-md-12 col-sm-12">
+							<label for="employeeEmailId">Email</label> <input type="email"
+								class="form-control" id="employeeEmailId" name="employeeEmailId"
+								required="requied" />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="employeePassword">Set Your Password</label> <input
+								type="password" class="form-control" id="employeePassword"
+								name="employeePassword" onkeyup="validatePassword(this.value);"
+								required minlength="6" maxlength="10" /><span id="msg"></span>
+						</div>
+						<input type="checkbox" onclick="myFunctionEmp()">Show
+						Password
+						<script>
+function myFunctionEmp() {
+var x = document
+.getElementById("employeePassword");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script>
+						<br>
+						<div class="col-md-12 col-sm-12">
+							<label for="employeeMobile">Mobile Number</label> <input
+								type="tel" class="form-control" id="employeeMobile"
+								name="employeeMobile" pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}"
+								required minlength="10" maxlength="10" /><span id="msg"></span>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="employeeName">Full Name</label> <input type="text"
+								class="form-control" id="employeeName" name="employeeName"
+								pattern="[a-zA-Z  ]*" required="requied" />
+						</div>
+						<!-- <label>Enter Captcha:</label>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" readonly
+									id="captcharCustomer" name="captcha" th:value=${captcha}>
+							</div>
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" id="userCaptcha"
+									name="userCaptcha" th:value=${userCaptcha} required />
+							</div>
+						</div>
+						<h6>
+							Captcha not visible <img th:src="@{images/ins/refresh.jpg}"
+								width="40px" onclick="capchaCustomer()">
+						</h6> -->
+
+						<div class="col-md-12 col-sm-12">
+							<button class="btn btn-info btn-block">Register</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="flipFlopStoreAdminR" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Register Now</h4>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/verification}" method=post
+						th:object="${AdminObj}" class="modal-form">
+						<div class="col-md-12 col-sm-12">
+							<label for="storeAdminEmail">Email</label> <input type="email"
+								class="form-control" id="adminEmail" name="adminEmail"
+								required="required" />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="storeAdminPassword">Set Your Password</label> <input
+								type="password" class="form-control" id="adminPassword"
+								name="adminPassword" onkeyup="validatePassword(this.value);"
+								required minlength="6" maxlength="10" /><span id="msg"></span>
+						</div>
+						<input type="checkbox" onclick="myFunctionAdmin()">Show
+						Password
+						<script>
+function myFunctionAdmin() {
+var x = document
+.getElementById("adminPassword");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script>
+						<br>
+						<div class="col-md-12 col-sm-12">
+							<label for="storeAdminMobile">Mobile Number</label> <input
+								type="tel" class="form-control" id="adminMobile"
+								name="adminMobile" pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}"
+								required minlength="10" maxlength="10" /><span id="msg"></span>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="storeAdminName">Full Name</label> <input type="text"
+								class="form-control" id="adminName" name="adminName"
+								pattern="[a-zA-Z ]*" required="required" />
+						</div>
+					<!-- 	<label>Enter Captcha:</label>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" readonly id="captcha"
+									name="captcha" th:value=${captcha}>
+							</div>
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" id="adminCaptcha"
+									name="adminCaptcha" th:value=${adminCaptcha} required />
+							</div>
+						</div>
+
+						<h6>
+							Captcha not visible <img th:src="@{images/ins/refresh.jpg}"
+								width="40px" onclick="cap()">
+						</h6> -->
+						<div class="col-md-12 col-sm-12">
+							<button class="btn btn-info btn-block">Register</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- sign-in form-->
+	-
+	<div class="modal fade" id="flipFlopEmployeeS" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Sign in</h4>
+				</div>
+				<div class="modal-body">
+					<form id="sign-in_form" th:action="@{/sign-inE}" method="get"
+						class="modal-form" th:object="${EmpObj}">
+						<div class="col-md-12 col-sm-12">
+						
+						<div class="form-group">
+							<label th:text="Email"></label> <input type="email"
+								class="form-control" id="employeeEmailId" name="employeeEmailId"
+								required="requied">
+						</div>
+						<div class="form-group">
+							<label th:text="Password"></label> <input type="password"
+								class="form-control" id="employeePasswordSignin"
+								name="employeePassword" required="required">
+						</div>
+						<input type="checkbox" onclick="myFunctionEmpSign()">Show
+						Password
+						<script>
+function myFunctionEmpSign() {
+var x = document
+.getElementById("employeePasswordSignin");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script>
+<br><a href="/forgotPasswordThree"> Forgot Password?</a>
+						<br>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<button class="btn btn-info btn-block">Sign-in</button>
+				</div>
+
+				</form>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Admin sign-in form-->
+	-
+	<!-- Admin sign-in form-->
+	-
+	<div class="modal fade" id="flipFlopStoreAdminS" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Sign in</h4>
+				</div>
+				<div class="modal-body">
+					<form id="sign-in_form" th:action="@{/sign-inAdmin}" method="get"
+						class="modal-form" th:object="${AdminObj}">
+						<div class="col-md-12 col-sm-12">
+						</div>
+						<div class="form-group">
+							<label th:text="Email"></label> <input type="email"
+								class="form-control" id="adminEmail" name="adminEmail"
+								required="required">
+						</div>
+						<div class="form-group">
+							<label th:text="Password"></label> <input type="password"
+								class="form-control" id="adminPasswordSignin"
+								name="adminPassword" required="required">
+						</div>
+						<input type="checkbox" onclick="myFunction()">Show
+						Password
+						<script>
+function myFunction() {
+var x = document
+.getElementById("adminPasswordSignin");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script><br><a href="/forgotPasswordTwo"> Forgot Password?</a>
+						<br> <label>Enter Captcha:</label>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" readonly id="captchar"
+									name="captcha" th:value=${captcha}>
+							</div>
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" id="adminCaptcha"
+									name="adminCaptcha" th:value=${adminCaptcha} required />
+							</div>
+						</div>
+
+
+
+
+
+						<h6>
+							Captcha not visible <img th:src="@{images/ins/refresh.jpg}"
+								width="40px" onclick="capcha()">
+						</h6>
+						<div class="col-md-12 col-sm-12">
+							<button class="btn btn-info btn-block">Sign-in</button>
+						</div>
+
+
+
+
+
+					</form>
+
+
+
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Customer Registration Form -->
+	<div class="modal fade" id="flipFlopPatientSignup" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Register Now</h4>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/customerVerification}" method=post
+						th:object="${CustomerObject}" class="modal-form">
+						<div class="col-md-12 col-sm-12">
+							<label for="customerName">Customer Name</label> <input placeholder="Enter name"
+								type="text" class="form-control" id="customerName"
+								name="customerName" pattern="[a-zA-Z  ]*" required="required" />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="customerEmailID">Email</label> <input type="email" placeholder="@gmail.com"
+								class="form-control" id="customerEmailID" name="customerEmailID" required="required" />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="password">Enter Password</label> <input
+								type="password" class="form-control" id="password"
+								name="password" onkeyup="validatePassword(this.value);" required
+								minlength="6" /><span id="msg"></span>
+						</div>
+						<input type="checkbox" onclick="myFunctionCust()">Show
+						Password
+						<script>
+function myFunctionCust() {
+var x = document
+.getElementById("password");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script>
+						<br>
+						<div class="col-md-12 col-sm-12">
+							<label for="customerMobile">Mobile Number</label> <input type="tel"
+								class="form-control" id="customerMobile" name="customerMobile"
+								pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}" required
+								minlength="10" maxlength="10" /><span id="msg"></span>
+						</div>
+						<!-- <label>Enter Captcha:</label>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" readonly
+									id="captchaCustomer" name="captcha" th:value=${captcha}>
+							</div>
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" id="userCaptcha"
+									name="userCaptcha" th:value=${userCaptcha} required />
+							</div>
+						</div>
+						<h6>
+							Captcha not visible <img th:src="@{images/ins/refresh.jpg}"
+								width="40px" onclick="capCustomer()">
+						</h6> -->
+						<div class="col-md-12 col-sm-12">
+							<button class="btn btn-info btn-block">Register</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="flipFlopPatientLogin" tabindex="-1"
+		role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalLabel">Sign in</h4>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/sign-in}" class="modal-form" method="GET"
+						th:object="${CustomerObject}">
+
+						<div class="col-md-12 col-sm-12">
+							<label for="customerEmailID">Email</label> <input type="customerEmailID"
+								class="form-control" id="customerEmailID" name="customerEmailID" th:value="${customerEmailID}"
+								placeholder="Your Email" required="required" />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<label for="password">Password</label> <input type="password"
+								class="form-control" id="passwordSignin" name="password"
+								th:value="${password}" placeholder="password"
+								required="required" />
+						</div>
+
+					<input
+							type="checkbox" onclick="myFunctionCustSign()">Show
+						Password
+						<script>
+function myFunctionCustSign() {
+var x = document
+.getElementById("passwordSignin");
+if (x.type === "password") {
+x.type = "text";
+} else {
+x.type = "password";
+}
+}
+</script>	<br><a href="/forgotPassword"> Forgot Password?</a> 
+						<br>
+<div class="col-md-12 col-sm-12">
+							<button class="btn btn-info btn-block">LogIn</button>
+						</div>
+						<!--  <div>
+                        <button type="submit" class="form-control" id="cf-submit" name="submit">
+                                    Submit Button
+                                </button>
+                         </div>-->
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="map">
+
+
+
+		<div class="mapakapapa" th:attr="data-mapakapapa=${branchesGMap}"
+			style="width: 100%; height: 100%"></div>
+
+
+
+	</div>
+	<!-- SCRIPTS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- 	<script src="js/jquery.sticky.js"></script> -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/1.js"></script>
+
+	<!-- slick slider -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<!-- jsFiddle will insert css and js -->
+	<script th:inline="javascript">
+let map;
+// var dtlat = parseFloat($('.mapa').attr('data-latitude'));
+// var dtlng = parseFloat($('.mapa').attr('data-longitude'));
+var myMapList = new Array($('.mapakapapa').attr('data-mapakapapa'));
+const msg = new String(myMapList);
+console.log('test')
+console.log(msg)
+arr=msg.split("],");
+console.log(arr)
+function initMap() {
+const uluru = { lat: 21.7679 , lng:78.8718};
+const map = new google.maps.Map(document.getElementById("map"), {
+zoom: 3,
+center: uluru,
+});
+setMarkers(map);
+}
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+//['last branch',17.44152586003627,78.49623728816555,1],['first branch',14.44017476113023,75.50288916592558,2],['middle branch',11.059821,78.387451,3],
+// const beaches = [myMapList];
+function setMarkers(map) {
+// Adds markers to the map.
+// Marker sizes are expressed as a Size of X,Y where the origin of the image
+// (0,0) is located in the top left of the image.
+// Origins, anchor positions and coordinates of the marker increase in the X
+// direction to the right and in the Y direction down.
+const image = {
+url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+// This marker is 20 pixels wide by 32 pixels high.
+size: new google.maps.Size(20, 32),
+// The origin for this image is (0, 0).
+origin: new google.maps.Point(0, 0),
+// The anchor for this image is the base of the flagpole at (0, 32).
+anchor: new google.maps.Point(0, 32),
+};
+// Shapes define the clickable region of the icon. The type defines an HTML
+// <area> element 'poly' which traces out a polygon as a series of X,Y points.
+// The final coordinate closes the poly by connecting to the first coordinate.
+const shape = {
+coords: [1, 1, 1, 20, 18, 20, 18, 1],
+type: "poly",
+};
+console.log(arr.length)
+for (let i = 0; i < arr.length-1; i++) {
+const beach = arr[i]+"]";
+console.log(beach)
+const obj = JSON.parse(beach);
+console.log('test'+i)
+console.log(obj)
+
+const marker = new google.maps.Marker({
+position: { lat: parseFloat(obj[1]), lng: parseFloat(obj[2]) },
+map,
+// icon: image,
+shape: shape,
+title: obj[0],
+zIndex: parseFloat(obj[3]),
+});
+
+
+
+const contentString =
+'<div id="content">' +
+'<div id="siteNotice">' +
+"</div>" +
+'<h1 id="firstHeading" class="firstHeading">' +obj[0]
+' </h1><div id="bodyContent">' +
+beach +
+"</div>" +
+"</div>";
+const infowindow = new google.maps.InfoWindow({
+content: contentString,
+});
+
+
+
+marker.addListener("click", () => {
+infowindow.open({
+anchor: marker,
+map,
+shouldFocus: false,
+});
+});
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+window.initMap = initMap;
+</script>
+	<script>
+    //   slick slider
+    $(".slider-box").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    //   slick slider
+    $(".slider-box-doc").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    </script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+
+
+	$("#storeID").on('change', function() {
+		var storeID = $('#storeID option:selected').val();
+		//  var storeID = $(this).val();
+	console.log(storeID)
+		var s = '';
+		if (storeID > 0) {
+			//   alert("storeId  : "+storeID);
+			$.ajax({
+				type: 'Get',
+				url: 'bookAppointments',
+				data: { "storeID": storeID },
+				success: function(result) {
+
+					var result = JSON.stringify(result)
+					var result = JSON.parse(result);
+					console.log(result)
+					//  alert("result  "+result);
+
+
+
+					for (var i = 0; i < result.length; i++) {
+
+						//    alert("result i "+result[i].branchName);
+
+						s += '<option value="' + result[i].branchID + '">' + result[i].branchName + '</option>';
+					}
+					$('#branchID').html(s);
+
+				}
+			});
+		}
+
+
+
+
+	});
+
+
+
+});
+    </script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6y-NWprrz-7d4tYu0C8c8PpdWCEkVRFM&callback=initMap&v=weekly"
+		defer></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+</head>
+
+
+<script
+	src="https://cdn.tiny.cloud/1/xsqkidrxta3zg6czz7munozzg81prejrityd07h52wl5ixi6/tinymce/6/tinymce.min.js"
+	referrerpolicy="origin"></script>
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<br> <br> <font size='20' face='Freestyle Script'
+					color='black'><h1 th:text="${session.adminObj}"></h1></font> <span><a
+					th:href="@{/adminLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/store.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+	<div class="sidebar-item">
+								<img src="../images/Icons/domain.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/domainForm}">Add Domains</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/service.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}" class="active">Services</a>
+							</div>
+							
+	<div class="sidebar-item">
+								<img src="../images/Icons/combo.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/combolist}">Combos</a>
+							</div>
+									<div class="sidebar-item">
+								<img src="../images/Icons/news.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/newsdetails}">Latest
+									News</a>
+								<!--/{id}(id=${newsID}) -->
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/customer.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+							<div class="sidebar-item">
+                                <img src="../images/Icons/inventory.png" alt="icon" class="img-fluid" />
+                                <a th:href="@{/productCategoryList}">Inventory</a>
+
+                            </div>
+                            <div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/vendordetails}">
+									Vendors</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/openings.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/openingsList}">Openings
+									List</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/network}">Social
+									Network</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/aboutus.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/about}">About us</a>
+							</div>
+							
+							<!-- <div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${session.adminID})}">Admin Profile</a>
+							</div> -->
+
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+
+
+				<div class="col-xl-10 col-lg-9 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+
+						<div class="page-heading">
+							<h1>Opening Details</h1>
+						</div>
+
+
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form id="objJob" th:action="@{/saveJob}" th:object="${objJob}"
+									method="POST">
+									
+									
+									<input type="hidden" th:field="*{positionID}"
+								placeholder="position Id" class="form control mg-4 col-4">
+									
+
+									<div class="row">
+										<div class="col-md-6">
+											<label for="avl">Position Name</label> <input type="text"
+												class="form-control" id="positionName" name="positionName"
+												th:field="*{positionName}" placeholder="Position Name"
+												required="required" th:minlength="1" th:maxlength="100">
+										</div>
+
+										<div class="col-md-6">
+											<label for="loc">Experience Required</label> <input
+												type="number" class="form-control" th:field="*{Experience}"
+												placeholder="Enter Experience in Years" required min="1" max="20000">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<label for="loc">Salary</label> <input type="number"
+												class="form-control" th:field="*{Salary}"
+												placeholder="Salary" required min="1" max="200000"></div>
+
+											<div class="col-md-6">
+												<label for="loc">Positions Required</label> <input
+													type="number" class="form-control"
+													th:field="*{positionsRequired}"
+													placeholder="positions Required" required  min="1" max="20000">
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<label for="avl">Gender</label>
+												<div>
+													<select class="form-control" id="Gender" name="Gender"
+														th:field="*{Gender}" required="required">
+														<option th:value="Male" th:text="Male"></option>
+														<option th:value="Female" th:text="Female"></option>
+
+														<!-- 	<option th:value="others" th:text="others"></option> -->
+													</select>
+												</div></div>
+
+											
+											
+												<div class="col-md-6">
+
+													<label for="loc">Select Store</label> <select
+														class="form-control" id="storeID" name="storeID"
+														th:field="*{storeID}" required="required"
+														onchange="openingsList(this.value);">
+														<option value="-1">Select Store</option>
+														<option th:each="storeList:${storeList}"
+															th:value="${storeList.storeID}"
+															th:text="${storeList.storeName}" /></option>
+													</select>
+												</div></div>
+													<div class="row">
+												<div class="col-md-6">
+													<label for="loc">Select Branch </label> <select
+														class="form-control" id="branchID" name="branchID"
+														th:field="*{branchID}" required="required"
+														onchange="openingsListBranch(this.value);">
+														<option value="-1">Select Branch</option>
+
+														<option th:each="branchList:${branchList}"
+															th:value="${branchList.branchID}"
+															th:text="${branchList.branchName}"></option>
+
+
+
+
+
+													</select>
+												</div>
+
+									
+												<div class="col-md-6">
+													<label for="loc">Select Domain </label> <select
+														class="form-control" id="domainID" name="domainID"
+														required="required">
+														<option th:each="domainList:${domainList}"
+															th:value="${domainList.domainID}"
+															th:text="${domainList.domainName}"></option>
+
+													</select>
+												</div></div>
+												<div class="row">
+													<div class="col-md-6">
+														<label for="Description"> Description</label>
+														<textarea class="form-control" id="Description"
+															th:field="*{Description}" th:text="*{Description}"
+															placeholder="Enter Job Description"></textarea>
+													</div>
+												</div>
+									
+
+
+												<div class="row">
+
+													<div class="col-md-6">
+														<label for=""></label>
+														<button class="btn btn-danger btn-block" type="submit"
+															style="color: black">Save Post</button>
+													</div>
+												</div>
+										
+								</form>
+
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<script>
+tinymce.init({
+selector: '#Description',
+plugins: [
+'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+],
+toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+'alignleft aligncenter alignright alignjustify | ' +
+'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+});
+</script>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script>
+$(document).ready(function() {
+var table = $('#example').DataTable();
+new $.fn.dataTable.FixedHeader( table, {
+alwaysCloneTop: true
+});
+} );</script>
+
+	<script src="/js/dropdown.js"></script>
+
+
+</body>
+</html>

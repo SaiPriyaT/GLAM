@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Glam customer Portal-addProfile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="#" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/../css/final.css" />
+  </head>
+<body>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-box">
+        <h1>Glam</h1>
+       <!--  <h2 th:text="${session.CustomerObject}"></h2> -->
+          <div>
+        <a href="/customerLogout">Logout</a>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 col-md-4">
+            <!-- sidebar -->
+     	<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/store.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+	<div class="sidebar-item">
+								<img src="../images/Icons/domain.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/domainForm}">Add Domains</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/service.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}" class="active">Services</a>
+							</div>
+							
+	<div class="sidebar-item">
+								<img src="../images/Icons/combo.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/combolist}">Combos</a>
+							</div>
+									<div class="sidebar-item">
+								<img src="../images/Icons/news.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/newsdetails}">Latest
+									News</a>
+								<!--/{id}(id=${newsID}) -->
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/customer.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/openings.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/openingsList}">Openings
+									List</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/network}">Social
+									Network</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/aboutus.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/about}">About us</a>
+							</div>
+							<div class="sidebar-item">
+                                <img src="../images/Icons/inventory.png" alt="icon" class="img-fluid" />
+                                <a th:href="@{/productCategoryList}">Inventory</a>
+
+                            </div>
+                            <div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/vendordetails}">
+									Vendors</a>
+							</div>
+							
+							<!-- <div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${session.adminID})}">Admin Profile</a>
+							</div> -->
+
+						</div>
+					</section>
+            <!-- sidebar end -->
+          </div>
+          <!-- main area -->
+          <div class="col-lg-10 col-md-8">
+            <div class="main-area">
+              <!-- page Heading End -->
+<h1>Enter Combo Offers</h1>
+</div>
+<form id="combo" th:action="@{/saveCombo}" th:object="${objCombo}" method="POST">
+<div class="col-md-12 col-sm-12">
+<label for="comboID"></label>
+<input type="hidden" class="form-control" id="comboID" name="comboID" th:value="*{comboID}" th:readonly="true"   />
+ </div>
+   <div class="row" align="center">
+   <div class="col-md-3">     
+ <label for="loc">Select Store Name</label>
+<select class="form-control"  id="storeName" name="storeName" th:field="*{storeName}" required="required">
+<option value="-1">Select Store</option>
+<option th:each="entry : ${StoreMap.entrySet()}" th:value="${entry.value}" th:text="${entry.value}" > </option>
+</select>
+</div>
+</div>
+<div class="row" align="center">
+<div class="col-md-3">     
+<label for="loc">Select careType</label>
+<select class="form-control"  id="careType" name="careType" th:field="*{careType}" required="required">
+<option value="-1">Select care</option>
+<option th:each="ourCare : ${careTypeList}" th:value="${ourCare}" th:text="${ourCare}" > </option>
+</select>
+</div>
+<div class="col-md-3">
+<label for="loc">Select Service</label>
+<select class="form-control" id="careName" name="careName" th:field="*{comboItems}" required="required" multiple>
+</select>
+</div> 
+</div> 
+ <!-- <div class="col-md-6">
+<label for="loc">Select CareType</label> 
+<select class="form-control" id="careType" name="careType"
+th:field="*{careType}" required="required" onchange="getServices(this.value);">
+<option value="-1">Select care</option>
+<option th:each="ourCare:${careTypeList}" th:value="${ourCare}" th:text="${ourCare}">
+</option>
+</select>
+</div>
+</div>-->
+<!-- <div class="row">
+<div class="col-md-6">
+<label for="loc">Select Service </label> <select class="form-control" id="careName" name="careName" th:field="*{comboItems}" required="required" >
+<option th:each="serviceNameList:${serviceNameList}" th:value="${serviceNameList.careName}" th:text="${serviceNameList.careName}"></option>
+</select>
+</div>
+</div>  -->
+  <div class="row" align="center">
+   <div class="col-md-3">
+   <label for="avl">Combo Name</label> 
+   <input type="text" class="form-control" id="comboName" name="comboName" th:value="*{comboName}" required="required" th:minlength="1" th:maxlength="100" placeholder="Combo Name" >
+</div>
+
+<div class="col-md-3">
+<label for="sep">Combo Price</label> <input
+type="number" class="form-control" id="comboPrice"
+name="comboPrice" th:value="*{comboPrice}"
+required="required" th:minlength="1" th:maxlength="100"
+placeholder="Combo Price">
+</div>
+</div>
+
+<div class="row" align="center">
+<div class="col-md-3">
+											<label for="loc">Combo Description</label>
+											<textarea class="form-control" id="comboItems" name="comboDescription"
+												th:value="*{comboDescription}" required="required" th:minlength="1"
+												th:maxlength="100" th:utext="*{comboDescription}"></textarea>
+
+										</div>
+									</div>
+ <div class="row" align="center">
+<div class="col-md-3">
+<label for="startDate">Start Date</label>
+<input type="Date" class="form-control" id="startDate" name="startDate" th:value="*{startDate}" placeholder="Enter Date"  th:minlength="1" th:maxlength="100" required >
+</div>
+
+<div class="col-md-3">
+<label for="endDate">End Date</label>
+<input type="Date" class="form-control" id="endDate" name="endDate" th:value="*{endDate}" placeholder="Enter Date" th:minlength="1" th:maxlength="100" required >
+</div>
+</div><br>
+<div class="row" >
+<button type="submit"  class="btn btn-info col-2">save</button></div>
+</form>
+<script>
+      tinymce.init({
+        selector: '#comboDescription',
+        plugins: [
+          'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+          'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+        ],
+        toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+          'alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+      });
+
+      </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/password.js"></script>
+    <script src="js/dropdown.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    //   slick slider
+    $(".slider-box").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    
+</script>
+</body>
+
+
+</html>
+<!-- SCRIPTS -->

@@ -1,0 +1,285 @@
+<!DOCTYPE html><html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('#example').DataTable({
+dom: 'Bfrtip',
+buttons: [{
+extend: 'excel',
+text: 'Excel',
+className: 'exportExcel',
+filename: 'Test_Excel',
+exportOptions: { modifier: { page: 'all'} }
+},
+{
+extend: 'pdf',
+text: 'PDF',
+className: 'exportExcel',
+filename: 'Test_Pdf',
+exportOptions: { modifier: { page: 'all'} }
+
+},
+     { extend: 'copy',
+            text: 'Copy ',
+            className: 'exportExcel',
+            exportOptions: { modifier: { modifier: {    page: 'current'} }  }     
+            },
+{
+extend: 'csv',
+text: 'csv ',
+exportOptions: {
+modifier: {
+search: 'none' } } 
+}]
+});
+
+});
+</script>
+
+
+<!-- <style>
+span {background-color: white;}
+span a {
+text-decoration: none;
+color: black;
+font-size: 20px;
+padding: 15px;
+display:inline-block;
+}
+ul {
+display: inline;
+margin: 0;
+padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: #555;}
+ul li:hover ul {display: block;}
+ul li ul {
+position: absolute;
+width: 150px;
+display: none;
+}
+ul li ul li {
+background: #555;
+display: block;
+}
+ul li ul li a {display:block !important;}
+ul li ul li:hover {background: #666;}
+/*
+body {
+background-image: url("/images/store2.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+} */
+</style> -->
+<!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+</head>
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<span><a th:href="@{/customerLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+<div class="sidebar-wrap">
+<div class="Heading">
+<h4>Dashboard</h4>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/appointment-form.png" alt=" icon" class="img-fluid" />
+ <a th:href="@{/review/{customerID}(customerID=${customerID})}">Appointments</a> 
+<!-- <a th:href="@{/review}">Appointments</a> -->
+</div>
+
+
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.jpg" alt="icon"
+class="img-fluid" />  <a th:href="@{/subscription/{customerID}(customerID=${customerID})}" >Subscribe Now</a>
+                               </div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/download.png" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/selectStore/{customerID}(customerID=${customerID})}" class="active">Rate our Employee</a>
+</div>
+<div class="sidebar-item">
+<img src="/../../images/Icons/rate employee.jpg" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/updatedProfile/{customerID}(customerID=${customerID})}">Customer Profile</a>
+</div>
+</div>
+</section>
+					<!-- sidebar end -->
+				</div>
+
+				<!-- header -->
+
+
+
+
+
+				<!-- main area -->
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+						<div class="page-heading">
+							<h1 align="center">Services</h1>
+
+							<center><h4 style=color:red th:text="${customerappmsg}"></h4></center>
+						</div>
+						<!-- page Heading End -->
+
+
+
+						<!-- abailablility -->
+
+
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form th:action="@{/savecustomerAppointment/{appID}(appID=${appointmentID})}" th:object="${customerAppointment1}"  
+                     method="POST"> 
+								
+								<input type="hidden"
+									class="form-control" id="appointmentID" name="appointmentID"
+									th:value="*{appointmentID}"/>
+									
+									<div class="col-md-6 col-sm-6">
+											<input type="hidden"
+												class="form-control" id="customerName" name="customerName"
+												placeholder="Full Name" th:value="${customerAppointment.customerName}" />
+										</div>
+									<div class="col-md-6 col-sm-6">
+											<input type="hidden"
+												class="form-control" id="customerID" name="customerID"
+												placeholder="Full customerID" th:value="${customerAppointment.customerID}" />
+										</div>
+									<div class="col-md-6 col-sm-6">
+											<input type="hidden"
+												class="form-control" id="appointmentDate" name="appointmentDate"
+												placeholder="Full appointmentDate" th:value="*{appointmentDate}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<input type="hidden"
+												class="form-control" id="gender" name="gender"
+												placeholder="Full Name" th:value="${customerAppointment.gender}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											 <input type="hidden"
+												class="form-control" id="customerEmailID" name="customerEmailID"
+												placeholder="Your Email" th:value="${customerAppointment.customerEmailID}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											 <input type="hidden"
+												class="form-control" id="customerMobile" name="customerMobile"
+												placeholder="customerMobile" th:value="${customerAppointment.customerMobile}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											 <input type="hidden"
+												class="form-control" id="customerLocation" name="customerLocation"
+												placeholder="customerLocation" th:value="${customerAppointment.customerLocation}" />
+										</div>
+										 <div class="col-md-6">
+										 <input type=hidden
+												class="form-control" id="storeID" name="storeID"
+												th:value ="*{storeID}">
+											
+										</div> 
+										 <div class="col-md-6">
+										 <input type=hidden
+												class="form-control" id="branchID" name="branchID"
+												th:value ="*{branchID}">
+											
+										</div> 
+							
+                        
+<table class="table table-bordered table-striped" id="example"
+									style="background-color: #e6e6fa; color: black; border-radius: 10px">
+	<thead>								
+<tr><th>Select service</th><th>Service Name</th><th>Service Type</th><th>Service Category</th><th>Service Duration</th><th>Service Price</th>
+				</tr></thead><tbody>
+				<tr th:each="ourCare: ${ourCare}">
+				
+					<td><input type=checkbox name=careID id="${ourCare.careID}"   th:value = "${ourCare.careID}" ></td>
+					<td th:text="${ourCare.careName}"></td>
+					<td th:text="${ourCare.careType}"></td>
+					<td th:text="${ourCare.careCategory}"></td>
+					<td th:text="${ourCare.careDuration}"></td>
+					<td th:text="${ourCare.carePrice}"></td>
+				</tr></tbody>
+				</table>
+												<button type="submit" class="app-btn" >Book Appointment</button>		
+				
+				
+						</form>
+
+							</div>
+
+						</div>
+						
+						
+
+</div>
+</div>
+
+
+						
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</main>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	
+
+</body>
+</html>

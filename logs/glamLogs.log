@@ -1,0 +1,274 @@
+2022-08-16 22:41:00.818 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-16 22:42:47.129 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-16 22:44:58.618 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-16 23:22:40.239 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 10:56:22.552 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 11:04:52.019 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 11:21:27.277 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 11:22:07.881 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-17 11:28:41.962 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 11:29:32.595 - DEBUG ; com.glam.controller.StoreAdminController ;  This is session object after null
+2022-08-17 11:50:58.340 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 11:51:02.485 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 11:51:39.504 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:00:14.225 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:00:38.968 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 12:00:44.580 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:02:31.456 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 12:25:19.413 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 12:25:50.486 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:25:53.786 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:25:55.684 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:28:58.072 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 12:35:59.515 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:36:42.746 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 12:36:45.722 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:45:04.340 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:46:17.435 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:48:25.835 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:49:40.322 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:52:54.998 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:53:14.524 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 12:57:00.087 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:01:23.457 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:06:34.913 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:10:50.577 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:11:12.665 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:13:01.367 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 13:13:21.004 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:13:57.604 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:19:25.315 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 13:19:32.347 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:21:10.132 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:26:10.288 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 13:26:12.477 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 13:28:33.535 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:21:12.208 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:21:18.236 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 14:21:22.570 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:21:35.593 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:21:38.367 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 14:21:40.636 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:22:03.314 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 14:22:05.660 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:23:03.869 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:26:44.822 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:28:45.371 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:29:17.946 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:31:10.683 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:32:46.722 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:36:09.564 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:36:48.644 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:38:25.155 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:38:33.938 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:40:57.553 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:46:24.261 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:46:37.389 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:47:17.035 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 14:47:19.940 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:58:55.956 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:59:04.315 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:59:12.670 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 14:59:34.449 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:00:33.540 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:01:23.874 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 15:01:26.679 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:02:17.045 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 15:02:19.088 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:02:28.848 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is a form for adding new category.
+2022-08-17 15:03:43.360 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 15:03:47.596 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:12:01.503 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:13:12.312 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:14:20.126 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:15:46.859 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:19:31.056 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:20:23.087 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:22:00.387 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:23:09.043 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:23:19.076 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:24:07.112 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:25:01.493 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:25:07.691 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:25:39.206 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:25:55.812 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:26:04.946 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:27:23.874 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:28:11.495 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:30:08.269 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:31:18.722 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:31:36.581 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:34:37.188 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:42:01.589 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:42:36.715 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:43:04.176 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:43:36.004 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:44:19.386 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:45:32.729 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:46:10.280 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:46:58.267 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:48:05.693 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:49:35.098 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:52:46.380 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:53:56.722 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:54:57.905 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:55:33.242 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:57:16.069 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:58:02.517 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:58:56.503 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 15:59:51.950 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:01:24.223 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:10:43.768 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:13:40.117 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:14:03.556 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:14:43.249 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:15:36.365 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:17:11.051 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:17:56.157 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:19:03.590 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:19:47.794 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:20:09.014 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:21:34.500 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:22:18.446 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:22:40.311 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:22:47.691 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:23:37.416 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:24:19.495 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:24:57.637 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:28:23.331 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:33:04.315 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:33:57.562 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:35:07.955 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:36:37.229 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:37:29.650 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:38:26.021 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:39:37.341 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:40:22.798 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:40:25.317 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:40:27.064 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:40:30.485 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:40:42.900 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:41:13.156 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:42:09.040 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:42:28.984 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:45:49.319 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:46:19.582 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 16:48:13.206 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 17:11:40.361 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-17 17:11:45.339 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 17:31:10.991 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 17:31:14.743 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 17:31:21.178 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-17 18:23:12.744 - DEBUG ; com.glam.controller.StoreAdminController ;  This is session object after null
+2022-08-17 18:24:52.339 - DEBUG ; com.glam.controller.StoreAdminController ;  This is session object after null
+2022-08-17 18:25:18.729 - DEBUG ; com.glam.controller.StoreAdminController ;  This is session object after null
+2022-08-17 18:47:22.983 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 17:59:14.857 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-18 17:59:21.241 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 18:18:13.056 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-18 18:18:32.260 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 18:20:06.646 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 18:20:21.593 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 18:25:46.643 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 18:32:46.886 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=19, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:32:46.913 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=19, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:49:08.645 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=19, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:49:08.647 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=19, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:49:52.371 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=20, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:49:52.372 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=20, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:50:48.539 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=21, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:50:48.540 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=21, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:51:54.160 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=22, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:51:54.165 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=22, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:54:59.980 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-18 18:55:04.154 - DEBUG ; com.glam.controller.SubscriberController ;  This is subscribers list
+2022-08-18 18:55:06.485 - DEBUG ; com.glam.controller.SubscriberController ;  This is a form for adding new subscriber.
+2022-08-18 18:55:25.857 - DEBUG ; com.glam.controller.SubscriberController ;  This is subscribers list
+2022-08-18 18:56:05.813 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=23, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:56:05.814 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=23, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 18:58:38.902 - DEBUG ; com.glam.controller.SubscriberController ;  This is subscribers list
+2022-08-18 19:17:14.985 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-18 22:28:02.770 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=24, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 22:28:02.819 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=24, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 22:55:17.959 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=25, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 22:55:17.961 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=25, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 22:56:02.018 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=26, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 22:56:02.019 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=26, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:00:57.738 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:00:57.738 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:03:57.684 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:03:57.685 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:09:39.945 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:09:39.990 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:09:42.811 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:09:42.812 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=27, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-18, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-18 23:11:23.928 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-19 15:37:04.765 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=28, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-19, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-19 15:37:04.819 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=28, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-19, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-19 15:38:26.356 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-19 15:38:58.317 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-19 17:21:12.223 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-19 17:40:13.376 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=29, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-19, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-19 17:40:13.459 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=29, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-19, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:23:47.782 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:23:47.787 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:23:50.292 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:23:50.294 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:24:06.773 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:24:06.774 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=null, branchName=null, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:24:18.789 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 11:24:18.789 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=null, careType=null, careName=null, gender=Male,,, carePrice=null, storeName=SR, branchName=Glam1, careDuration=null, careID=null, careCategory=null, storeID=1, branchID=1)
+2022-08-20 12:14:44.326 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 12:51:50.114 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:51:56.966 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is a form for adding new category.
+2022-08-20 12:52:02.888 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:54:15.776 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:54:17.014 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:54:55.424 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:54:58.703 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is a form for adding new category.
+2022-08-20 12:55:07.122 - DEBUG ; com.glam.controller.ProductCategoryController ;  This is ProductCategory list
+2022-08-20 12:55:43.781 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-20 12:56:27.166 - DEBUG ; com.glam.controller.ProductController ;  This is list of products in categoryid 1
+2022-08-20 12:56:33.143 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:20:28.582 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:26:39.279 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:28:11.339 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:32:13.103 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:32:17.780 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:34:07.716 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:36:40.723 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:44:46.545 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:51:48.733 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 13:53:33.317 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 14:55:44.442 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:13:52.324 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:15:36.764 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:18:16.108 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:18:59.964 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:23:02.766 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 15:23:13.216 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 16:40:10.033 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=2022-08-20, careType=body care, careName=tattoo, gender=Male,,, carePrice=584.0, storeName=SR, branchName=Glam1, careDuration=120, careID=2, careCategory=Male, storeID=1, branchID=1)
+2022-08-20 16:40:10.036 - INFO  ; com.glam.controller.CustomerAppointmentController ;  CustomerAppointment(appointmentID=30, customerID=2, customerName=pavan, customerEmailID=pavanmanugonda1@gmail.com, customerMobile=7884517894, customerLocation=warangal, appointmentDate=2022-08-20, appointmentBookedDate=2022-08-20, careType=body care, careName=tattoo, gender=Male,,, carePrice=584.0, storeName=SR, branchName=Glam1, careDuration=120, careID=2, careCategory=Male, storeID=1, branchID=1)
+2022-08-20 17:50:10.777 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 17:50:18.440 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 17:51:05.497 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:06:31.741 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:19:12.210 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:48:25.221 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:48:44.078 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:57:33.280 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 18:58:20.977 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 19:24:03.767 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 19:26:17.111 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-20 19:26:19.965 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-26 10:01:45.417 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-26 10:03:01.286 - DEBUG ; com.glam.controller.BranchController ;  This is list of branches in store id 2
+2022-08-26 10:05:37.597 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-26 10:06:40.831 - DEBUG ; com.glam.controller.BranchController ;  This is list of branches in store id 2
+2022-08-26 10:06:48.097 - DEBUG ; com.glam.controller.StoreController ;  This is store list
+2022-08-26 10:07:10.799 - DEBUG ; com.glam.controller.BranchController ;  This is list of branches in store id 2
+2022-08-26 10:07:56.388 - DEBUG ; com.glam.controller.OurCareController ;  This is total list of services.
+2022-08-26 10:08:07.356 - DEBUG ; com.glam.controller.OurCareController ;  this is care id 5
+2022-08-26 10:08:07.357 - DEBUG ; com.glam.controller.OurCareController ;  this is store id 2
+2022-08-26 10:08:26.552 - DEBUG ; com.glam.controller.OurCareController ;  This is total list of services.
+2022-08-26 10:08:32.472 - DEBUG ; com.glam.controller.BranchController ;  This is list of branches in store id 2

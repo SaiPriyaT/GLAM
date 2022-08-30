@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Glam customer Portal-addProfile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="#" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <!-- <body onload="GenerateCaptcha();"> -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-box">
+        <h1>Glam</h1>
+        <!-- <h2 th:text="${session.CustomerObject}"></h2> -->
+          <!--  <h4>You have successfully registered </h4> </h1><h1 th:text="${customerName}"></h1> -->
+          <div>
+        <a href="/customerLogout">Logout</a>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 col-md-4">
+            <!-- sidebar -->
+           <section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/store.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+	<div class="sidebar-item">
+								<img src="../images/Icons/domain.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/domainForm}">Add Domains</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/service.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}" class="active">Services</a>
+							</div>
+							
+	<div class="sidebar-item">
+								<img src="../images/Icons/combo.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/combolist}">Combos</a>
+							</div>
+									<div class="sidebar-item">
+								<img src="../images/Icons/news.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/newsdetails}">Latest
+									News</a>
+								<!--/{id}(id=${newsID}) -->
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/customer.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/openings.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/openingsList}">Openings
+									List</a>
+							</div>
+							
+							<div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/vendordetails}">
+									Vendors</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/network}">Social
+									Network</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/aboutus.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/about}">About us</a>
+							</div>
+							
+							<!-- <div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${session.adminID})}">Admin Profile</a>
+							</div> -->
+
+						</div>
+					</section>
+            <!-- sidebar end -->
+          </div>
+          <!-- main area -->
+          <div class="col-lg-10 col-md-8">
+            <div class="main-area">
+        <!--  <div align="center" th:if="${hello==null}"><h4>Registered successfull</h4></div>
+            <div align="center" th:unless="${hello==null}"><h4>welcome</h4></span></div> -->
+              <!-- page Heading -->
+              <div class="page-heading">
+                <h1>combo</h1>
+              </div>
+              <!-- page Heading End -->
+
+              <!-- abailablility -->
+
+              <div class="avaliability-box">
+                <div class="form-box">
+                 <form th:action="@{/UploadComboProfile}" method=post th:object="${objCombo}"S class="form-box"> 
+                  <fieldset>
+                  <legend> combo details: </legend>
+                         <div class="col-md-12 col-sm-12">
+                            <label for="comboId"></label>
+                            <input type="hidden" class="form-control" id="comboID" name="comboID" th:value="*{comboID}" th:readonly="true"   />
+                        </div>
+                       <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label for="comboName">Combo Name</label>
+                            <input type="text" class="form-control" id="comboName" name="comboName" th:value="*{comboName}" th:readonly="false"   />
+                        </div>
+                         <div class="col-md-12 col-sm-12">
+                            <label for="storeName">Store Name</label>
+                            <input type="storeName" class="form-control" id="storeName" name="storeName" th:value="*{storeName}" th:readonly="true"    />
+                        </div>
+                        </div>
+   
+                     <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <label for="comboItems">Combo Items</label>
+                            <input type="text" class="form-control" id="comboItems" name="comboItems" th:value="*{comboItems}" th:readonly="true"  />
+                        </div> 
+                        <div class="col-md-12 col-sm-12">
+                            <label for="comboPrice">Price</label>
+                            <input type="comboPrice" class="form-control" id="comboPrice" name="comboPrice" th:value="*{comboPrice}" th:readonly="false"   />
+                        </div></div>
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                        <label for="avl">Combo Discription</label> <input
+                         type="text" class="form-control" id="comboItems"
+                         name="comboDescription" th:value="*{comboDescription}"
+                         required="required" th:minlength="1" th:maxlength="100"
+                         placeholder="combo Description" >
+                         </div>
+                         </div>
+                        <div class="col-md-12 col-sm-12">
+                            <label for="startDate">Start Date</label>
+                            <input type="Date" class="form-control" id="startDate" name="startDate" th:value="*{startDate}" required="required"/>
+                        </div>
+                         <div class="col-md-12 col-sm-12">
+                            <label for="endDate">End Date</label>
+                            <input type="Date" class="form-control" id="endDate" name="endDate" th:value="*{endDate}" required="required"/>
+                        </div>
+                       </fieldset>
+                    <div class="row">
+                      
+                      <div class="col-md-6">
+                        <label for=""></label>
+                        <button class="btn btn-info btn-block" style="color: black">
+                    
+                       Update
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              .
+               <!--  abailablility -->
+            </div>
+          </div>
+        </div>
+        .
+       <!--  main area end -->
+      </div> 
+    </main>
+.
+  <!--  SCRIPTS -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+      <script src="js/dropdown.js"></script> 
+  </body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+                                               <!--
+                                             <div class="col-md-6">
+											<label for="loc">Select CareType</label> <select
+												class="form-control" id="careType" name="careType"
+												th:field="*{careType}" required="required"
+												onchange="addService(this.value);">
+												<option value="-1">Select care</option>
+												<option th:each="ourCare:${ourCareList}" th:value="${ourCare}"
+												</option>
+											</select>
+										</div>
+									</div>
+                                  <div class="row">
+										<div class="col-md-6">
+											<label for="loc">Select Service </label> <select
+												class="form-control" id="careName" name="careName"
+												th:field="*{comboItems}" required="required" multiple>
+												</select>
+										</div>
+									</div>
+                                        -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row" align="center">
+<div class="col-md-3">
+<label for="avl">Combo</label> -->
+<!--  <div >-->
+<!-- <input type="checkbox" th:each="entry : ${CareMap.entrySet()}" th:value="${{entry.key}}" th:text="${entry.value}" th:field="*{comboItems}"  required="required" />  -->
+<!--	<input type="checkbox" th:each="entry : ${CareMap.entrySet()}" th:value="${{entry.value}}" th:text="${entry.value}" th:field="*{comboItems}"  required="required" />-->
+<!--<div>-->
+
+<!--<div th:each="hobby : ${allHobbies}">
+				<input type="checkbox" th:id="${{hobby}}" th:value="${{hobby}}" th:field="*{comboItems}" />
+				<label th:for="${{hobby}}" th:text="${hobby.description}">Combo</label>
+			</div> -->
+	<!-- <select class="form-control" id="services" name="s" multiple="multiple">
+	<option th:each="part : ${comboItems}"th:selected="${servisAttribute.parts.contains(part)}"th:value="${part.id}"th:text="${part.name}">
+	Part name
+	</option>
+	</select>	-->	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymrleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>combo</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container ">
+		<h1>combo</h1>
+		<hr>
+		<h2>Update Combo</h2>
+
+		<form action="#" th:action="@{/saveCombo}" th:object="${objCombo}"
+			method="POST">
+			  <form th:action="@{/UploadComboProfile}" method=post th:object="${objCombo}"S class="form-box">
+			
+			
+        <input type="hidden" th:field="*{comboID}" placeholder="combo Id" th:readonly="${param.action!='edit'}" class="form control mg-4 col-4" >
+<input type="text" th:field="*{comboName}" placeholder="combo Name" class="form control mg-4 col-4">
+<input type="text" th:field="*{comboItems}" placeholder="combo Items" class="form control mg-4 col-4">
+<input type="hidden" th:field="*{updatedBy}" placeholder="updated By" class="form control mg-4 col-4">
+
+<input type="hidden" th:field="*{isActive}" placeholder="IsActive" class="form control mg-4 col-4">
+
+			<button type="submit" class="btn btn-info col-2">Update</button>
+		</form>
+		
+	</div>
+</body>
+</html> -->

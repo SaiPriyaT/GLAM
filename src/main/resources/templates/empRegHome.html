@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+
+<style>
+
+body {
+   background-image: url("/images/store2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} 
+</style>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/final.css" />
+</head>
+
+
+
+<body>
+<!-- header -->
+<header class="header">
+<div class="container-fluid">
+<div class="header-box">
+<h5><strong>GLAM Employee Portal</strong></h5><br><br>
+<font size='20'face='Freestyle Script'color='black'></font>
+
+<h3><strong><a th:href="@{/logout}">LOGOUT</a></strong></h3>
+
+
+ </div>
+</div>
+</header>
+<main class="main">
+<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+						<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+						<!-- 	<div class="sidebar-item">
+								<img src="../images/Icons/attendance.png" alt="icon"
+									class="img-fluid" /> <a
+								th:href="@{/preAttendanceForm/{empID}(empID=${empID})}">Attendance</a>
+							</div> -->
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/editemp.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/updateEmpProfile/{empID}(empID=${empID})}">Add Your Profile</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/editemp.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/updatedEmpProfile/{empID}(empID=${empID})}">View Your Profile</a>
+							</div>
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+<!-- header -->
+
+<!-- main area -->
+<div class="col-xl-10 col-lg-9 col-md-8">
+<div class="main-area">
+<!-- page Heading -->
+<div class="page-heading">
+
+ <span style="background-color: transparent; font-size:xx-large;">Hello !</span>&nbsp;&nbsp;<span  style="background-color: transparent; font-size: xx-large;"  th:text ="${session.Name}" /></span>
+ <br><br>
+ <h2> Welcome to the GLAM Employee Portal</h2>
+ <marquee style=color:skyblue;font-size:60px; behavior="scroll" direction="left"><span style="background-color:black ;font-size: x-large;font-weight: bolder;" th:text="${AddProfileMsg}"></span></marquee>
+       
+ </div>
+ </div></div>
+</div></div></main>
+
+</body>
+</html>

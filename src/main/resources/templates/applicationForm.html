@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Job Description Page</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../../css/magnific-popup.css" />
+
+<link rel="stylesheet" href="../css/font-awesome.min.css" />
+<link rel="stylesheet" href="../css/animate.css" />
+
+<link rel="stylesheet" href="../css/owl.carousel.css" />
+<link rel="stylesheet" href="../css/owl.theme.default.min.css" />
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse"
+	data-offset="50">
+
+	<!-- PRE LOADER -->
+	<section class="preloader">
+		<div class="spinner">
+
+			<span class="spinner-rotate"></span>
+
+		</div>
+	</section>
+
+
+	<!-- HEADER -->
+	<header>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-3">
+					<p>Welcome to GLAM Careers</p>
+				</div>
+
+			<!-- 	<div class="col-md-8 col-sm-9 text-align-right">
+					<span class="phone-icon"><i class="fa fa-phone"></i>
+						010-060-0160</span> <span class="date-icon"><i
+						class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span> <span
+						class="email-icon"><i class="fa fa-envelope-o"></i> <a
+						href="#">info@company.com</a></span>
+				</div>
+ -->
+			</div>
+		</div>
+	</header>
+
+
+	
+	
+	
+	<section class="navbar navbar-default navbar-static-top"
+		>
+		<div class="container">
+			<div class="navbar-header">
+				
+					
+			
+				<!-- lOGO TEXT HERE -->
+				<a th:href="@{/}" class="navbar-brand">GLAM</a>
+			</div>
+			<!-- MENU LINKS -->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<section id="home" class="slider" data-stellar-background-ratio="0.5">
+		<div style="color: red">
+			<span th:text="${error}"></span> <span th:text="${errormsg3}"></span>
+			<span th:text="${errormsg2}"></span> <span th:text="${errormsg1}"></span>
+		</div>
+</section>
+
+				
+		
+				
+	</div>
+	
+	</section>
+
+			 <!-- NEWS DETAIL -->
+		<section id="news-detail" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+
+					
+								<form action="#" th:action="@{/saveApplication}"
+									th:object="${jobSeekers}" method="POST">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="avl">Enter Your Name*</label> <input type="text"
+												class="form-control" id="jobSeekerName" name="jobSeekerName"
+												th:value="*{jobSeekerName}" required="required"
+												th:minlength="1" th:maxlength="100" placeholder="Your Name">
+										</div>
+								
+								
+									<div class="col-md-6">
+											<label for="avl">Gender*</label>
+											<div>
+												<select class="form-control" id="gender"
+													name="gender" th:field="*{gender}"
+													required="required">
+													<option th:value="Male" th:text="Male"></option>
+													<option th:value="Female" th:text="Female" ></option>
+													
+												
+												</select>
+											</div>
+										</div>
+										</div>
+										<div class="row">
+										<div class="col-md-6">
+											<label for="avl">Total Experience</label> <input
+												type="number" class="form-control" th:value="*{experience}"
+												placeholder="Experience you have" min="0" max="50000" required="required">
+										</div>
+								
+										<div class="col-md-6">
+											<label for="avl">Enter Address*</label> <input type="text"
+												class="form-control" id="location" name="location"
+												th:value="*{location}" required="required" th:minlength="1"
+												th:maxlength="100" placeholder="Current Location">
+										</div>
+									</div>
+									<div class="row">
+									<div class="col-md-6 col-sm-6">
+										<label for="email">Email*</label> <input type="email"
+											class="form-control" id="email" name="email"
+											th:value="*{email}" required="required" placeholder="@gmail.com"/>
+						</div>
+									<div class="col-md-6">
+											<label for="name">Mobile Number*</label> <input type="tel"
+												class="form-control" placeholder="Enter Your Mobile Number"
+												name="adminMobile" th:value="*{phoneNo}" pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}" required minlength="10" maxlength="10">
+						</div>
+                    </div>
+                 
+
+						
+								<div class="col-md-6">
+									<label for="avl"></label> <input type="hidden"
+										class="form-control" id="positionID" name="positionID"
+										th:value="${positionID}">
+								</div>
+								
+
+													
+														<label for=""></label>
+														<button class="btn btn-info btn-block" type="submit"
+															style="color: black">Upload</button>
+													
+												
+						</form></div></div>
+				
+		</section>
+		
+		 <!-- SCRIPTS --> <script src="../js/jquery.js"></script> <script
+			src="../js/bootstrap.min.js"></script> <script
+			src="../js/jquery.sticky.js"></script> <script
+			src="../js/jquery.stellar.min.js"></script> <script
+			src="js/jquery.magnific-popup.min.js"></script> <script
+			src="js/magnific-popup-options.js"></script> <script
+			src="../js/wow.min.js"></script> <script src="../js/smoothscroll.js"></script>
+		<script src="../js/owl.carousel.min.js"></script> <script
+			src="../js/custom.js"></script>
+</body>
+</html>

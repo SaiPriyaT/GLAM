@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" th:href="@{/../css/final.css}" />
+</head>
+
+
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<br> <br> <font size='20' face='Freestyle Script'
+					color='black'><h1 th:text="${session.adminObj}"></h1></font> <span><a
+					th:href="@{/adminLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/app.png" alt=" icon" class="img-fluid" />
+								<a href="./index.html">Appointments</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/profile.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/pa.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/cal.png" alt="icon" class="img-fluid" />
+								<a href="./avaliability.html">Availability</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/profile.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}">Services</a>
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${adminID})}">Admin Profile</a>
+							</div>
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+
+
+				<div class="col-xl-10 col-lg-9 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+
+						<div class="page-heading">
+							<h1>Update Product</h1>
+						</div>
+						<br>
+						<form th:action="@{/saveProduct}" th:object="${product}"
+							method="POST">
+
+
+							<input type="hidden" th:field="*{productId}"
+								 class="form control mg-4 col-4">
+
+							<input type="hidden" th:field="*{Units}"
+								 class="form control mg-4 col-4">
+
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl">Product Name</label> <input type="text"
+										th:field="*{productName}" placeholder="Product Name"
+										required="required" th:minlength="1" th:maxlength="100"
+										class="form-control" readonly>
+								</div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl"></label> <input type="hidden"
+										th:field="*{productBrand}" placeholder="Product Name"
+										 th:minlength="1" th:maxlength="100"
+										class="form-control" readonly>
+								</div>
+								</div>
+								<div class="row">
+								<div class="col-md-6">
+									<label for="avl"></label> <input type="hidden"
+										th:field="*{productQuantity}" placeholder="Product Name"
+										 th:minlength="1" th:maxlength="100"
+										class="form-control" readonly>
+								</div>
+								</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl">Units</label> <input type="number"
+										class="form-control" name="Q" placeholder="Units" min="-50000"
+										max="50000" required>
+								</div>
+							</div>
+
+
+
+
+
+
+							<div class="row" align="center">
+								<input type="hidden" th:field="*{categoryId}" id="categoryId"
+									placeholder="Category id" th:readonly="${param.action!='edit'}"
+									class="form control mg-4 col-4">
+							</div>
+							<br>
+
+
+
+							<button type="submit" class="btn btn-info col-2" >Add/Remove Units</button>
+						</form>
+						<hr>
+
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	</div>
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script>
+$(document).ready(function() {
+var table = $('#example').DataTable();
+new $.fn.dataTable.FixedHeader( table, {
+alwaysCloneTop: true
+});
+} );</script>
+
+</body>
+</html>

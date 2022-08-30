@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<style>
+fieldset {
+	background-color: #f9f9f9;
+}
+
+legend {
+	/* background-color:; */
+	color: black;
+	padding: 3px 10px;
+}
+
+input {
+	margin: 5px;
+}
+</style>
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="../css/final.css" />
+</head>
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM Employee Portal</h4>
+				<h3 align="center" th:text="${session.Name}"></h3>
+
+				<a th:href="@{/logout}">LogOut</a>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h2>Dashboard</h2>
+							</div>
+
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/editemp.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/updatedEmpProfile/{empID}(empID=${empID})}">View
+									Your Profile</a>
+							</div>
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+				<!-- header -->
+
+
+
+				<!-- main area -->
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+						<div class="page-heading" align="center">
+							<h1>Your Profile</h1>
+						</div>
+						<div>
+							<div class="action-box"></div>
+						</div>
+						<h3><strong>Click on</strong></h3><div align ="left"><a style="color: black"
+						th:href="@{/editEmpProfile/{empID}(empID=${empID})}"
+						class="btn btn-primary"> Add Profile</a></div><h3><strong>to update your profile picture and details</strong></h3>
+						
+						<div class="row-md-4" align="center">
+										<img alt=""
+											th:src="*{'data:employeeImage/png;base64,'+{employeeImage}}"
+											style="max-width: 18%; width: 100px; height: 150px; border-radius: 5px; margin-top: 5px; margin-left: 5px; margin-bottom: 5px; margin-right: 5px;">
+									</div>
+						
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form method="get" th:action="@{/updatedEmpProfile}"
+									th:object="${EmpObj}" class="form-box">
+
+									<div class="column" align="left">
+										<!--  <label for="employeeId">EmployeeID</label> -->
+										<input type="hidden" class="form-control" id="employeeId"
+											name="employeeId" th:value="*{employeeId}" th:readonly="true" />
+									</div>
+									<div class="column" align="left">
+										<!--   <label for="employeePassword">Password</label> -->
+										<input type="hidden" class="form-control"
+											id="employeePassword" name="employeePassword"
+											th:value="*{employeePassword}" th:readonly="true" />
+									</div>
+									<fieldset>
+										<legend>
+										<button   style= "text-align:left ; color:black"  class ="btn btn-danger btn-block"> Your Registration Details :</button>
+										</legend>
+
+
+										<div class="col-md-4">
+											<label for="employeeEmailId"> Email</label> <input
+												type="email" class="form-control" id="employeeEmailId"
+												name="employeeEmailId" th:value="*{employeeEmailId}"
+												th:readonly="true" />
+										</div>
+
+
+										<div class="col-md-4">
+											<label for="employeeMobile"> Mobile Number</label> <input
+												type="tel" class="form-control" id="employeeMobile"
+												name="employeeMobile" th:value="*{employeeMobile}"
+												th:readonly="true" />
+										</div>
+
+
+										<div class="col-md-4">
+											<label for="employeeName"> Full Name</label> <input
+												type="text" class="form-control" id="employeeName"
+												name="employeeName" th:value="*{employeeName}"
+												th:readonly="true" />
+										</div>
+									</fieldset>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</main>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script>
+		$(document).ready(function() {
+			var table = $('#example').DataTable();
+			new $.fn.dataTable.FixedHeader(table, {
+				alwaysCloneTop : true
+			});
+		});
+	</script>
+
+</body>
+</html>

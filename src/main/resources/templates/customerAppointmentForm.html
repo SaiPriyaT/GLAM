@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Glam </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="#" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+   
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/../css/final.css" />
+  </head>
+
+  <body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<br> <br> <font size='20' face='Freestyle Script'
+					color='black'><h1 th:text="${session.CustomerObject}"></h1></font> <span><a
+					th:href="@{/customerLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+    <!-- header end -->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 col-md-4">
+            <!-- sidebar -->
+            <section class="sidebar">
+              <div class="sidebar-wrap">
+                <div class="Heading">
+                <h4>Dashboard</h4>
+                </div>
+               <div class="sidebar-item">
+<img src="../images/Icons/download.jpg" alt="icon"
+class="img-fluid" />  <a th:href="@{/subscription/{customerID}(customerID=${customerID})}" >Subscribe Now</a>
+                               </div>
+<div class="sidebar-item">
+<img src="../images/Icons/download.png" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/selectStore/{customerID}(customerID=${customerID})}" class="active">Rate our Employee</a>
+</div>
+<div class="sidebar-item">
+<img src="../images/Icons/rate employee.jpg" alt="icon"
+class="img-fluid" /> <a
+th:href="@{/updatedProfile/{customerID}(customerID=${customerID})}">Customer Profile</a>
+</div>
+              </div>
+            </section> 
+            <!-- sidebar end -->
+          </div>
+          <!-- main area -->
+          <div class="col-lg-10 col-md-8">
+            <div class="main-area">
+         <!-- <div align="center" th:if="${hello==null}"><h4>Registered successfull</h4></div>
+            <div align="center" th:unless="${hello==null}"><h4>welcome</h4></span></div> -->
+              <!-- page Heading -->
+              <div class="page-heading">
+                <h1>customer Appointment</h1>
+              </div>
+              <!-- page Heading End -->
+
+              <!-- abailablility -->
+ <div class="avaliability-box">
+                <div class="form-box">
+							
+                     <form id="savecustomerAppointment" th:action="@{/review/bookAppointment/save}" th:object="${customerAppointment1}"  
+                     method="POST"> 
+									<!-- SECTION TITLE -->
+									
+									<input type="hidden" id="customerID" name="customerID" th:value="*{customerID}">
+        
+									<div class="section-title wow fadeInUp">
+										<h2>Make an appointment</h2>
+									</div>
+		
+ <div class="row">
+										<div class="col-md-6 col-sm-6">
+											<label for="name">Name</label> <input type="text"
+												class="form-control" id="customerName" name="customerName"
+												placeholder="Full Name" th:value="${customerVisit.customerName}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<label for="gender">Gender</label> <input type="text"
+												class="form-control" id="gender" name="gender"
+												placeholder="Full Name" th:value="${customerVisit.gender}" />
+										</div></div>
+										<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<label for="customerEmailID">CustomerEmailID</label> <input type="email"
+												class="form-control" id="customerEmailID" name="customerEmailID"
+												placeholder="customerEmailID" th:value="${customerVisit.customerEmailID}" />
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<label for="customerMobile">CustomerMobile</label> <input type="tel"
+												class="form-control" id="customerMobile" name="customerMobile"
+												placeholder="customerMobile" th:value="${customerVisit.customerMobile}" />
+										</div></div>
+										<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<label for="customerLocation">CustomerLocation</label> <input type="tel"
+												class="form-control" id="customerLocation" name="customerLocation"
+												 th:value="${customerVisit.customerLocation}" />
+										</div></div>
+										<div class="row">
+										 <div class="col-md-6">
+											<label for="loc">Select Store</label> <select
+												class="form-control" id="storeID" name="storeID"
+												th:field="*{storeID}" required="required"
+												onchange="bookAppointmentjs(this.value);">
+												<option value="-1">Select Store</option>
+												<option th:each="storeList:${storeList}"
+													th:value="${storeList.storeID}"
+													th:text="${storeList.storeName}" /></option>
+											</select>
+										</div> 
+							
+                         <div class="col-md-6">
+									<label for="loc">Select Branch </label> <select
+										class="form-control" id="branchID" name="branchID" 
+										 required="required">
+										<option th:each="branchList:${branchList}"
+											th:value="${branchList.branchID}"
+											th:text="${branchList.branchName}"></option>
+											</select>
+								</div>
+								
+                         <div class="col-md-6">
+									<label for="loc">Select Date </label> <select
+										class="form-control" id="appointmentDate" name="appointmentDate" 
+										 required="required">
+										<option th:each="datedropdown:${appointmentDate}"
+											th:value="${datedropdown}"
+											th:text="${datedropdown}"></option>
+											</select>
+								</div></div>
+									<div class="row">
+								<div class="col-md-2">
+										<button class="btn btn-info btn-block" 	type="submit" style="color: black">
+											Next
+										</button>
+
+									</div></div>
+							
+</form>
+								
+										
+<!-- 									<div class="sidebar-item"> 
+<a th:href="@{/findservices}" class="btn-btn-danger">Find services</a>
+</div>	 -->
+										
+									
+									
+
+                      </div>
+                    </div>
+               <!--   </form> -->
+                </div>
+              </div>
+
+              <!-- abailablility -->
+            </div>
+          </div>
+        </div>
+        <!-- main area end -->
+      </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/dropdown.js"></script>
+    <!-- <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+		crossorigin="anonymous">
+</script>
+	<script src="/js/dropdown.js"></script>
+    
+  </body>
+</html>

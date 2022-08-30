@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/../css/final.css" />
+</head>
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM Employee Portal</h4>
+				<h3 align="center" th:text="${session.Name}"></h3>
+
+				<a th:href="@{/logout}">LogOut</a>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+					<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h2>Dashboard</h2>
+							</div>
+
+
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+				<!-- header -->
+
+
+
+				<!-- main area -->
+				<div class="col-lg-10 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+						<div class="page-heading">
+							<i><h1>Update Your Profile</h1></i>
+
+						</div>
+						<!-- page Heading End -->
+
+						<div class="avaliability-box">
+							<div class="form-box">
+								<form id="EmpObj" th:action="@{/uploadEmpProfile}" method=post
+									th:object="${EmpObj}" enctype="multipart/form-data"
+									class="form-box">
+									
+									<div class="col-md-6 col-sm-6">
+										<!-- <label for="employeeId">EmployeeID</label> -->
+										<input type="hidden" class="form-control" id="employeeId"
+											name="employeeId" th:value="*{employeeId}" th:readonly="true" />
+									</div>
+									
+							<div class="row">
+									<div class="col-md-6 col-sm-6">
+										<label for="employeeEmailId">Email</label> <input type="email"
+											class="form-control" id="employeeEmailId"
+											name="employeeEmailId" th:value="*{employeeEmailId}"
+											required="required" th:readonly="true" />
+									</div>
+									</div>
+									
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<label for="employeeMobile">Mobile Number</label> <input
+										type="tel" class="form-control" id="employeeMobile"
+										name="employeeMobile" th:value="*{employeeMobile}"
+										required="required" />
+								</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6 col-sm-6">
+										<label for="employeeName">Employee Full Name</label> <input
+											type="text" class="form-control" id="employeeName"
+											name="employeeName" th:value="*{employeeName}" />
+									</div>
+									</div>
+																	<div class="row">
+									
+									<div class="col-md-6 col-sm-6">
+										<label for="employeeAge">Enter your Age</label> <input
+											type="text" class="form-control" id="employeeAge"
+											name="employeeAge" th:value="*{employeeAge}"
+											required="required" />
+									</div>
+								</div>
+								
+								
+								<div class="row">
+									<div class="col-md-6">
+										<label for="employeeGender">Gender*</label>
+										<div>
+											<select class="form-control" id="employeeGender"
+												name="employeeGender" th:value="*{employeeGender}"
+												required="required">
+												<option th:value="Male" th:text="Male"></option>
+												<option th:value="Female" th:text="Female"></option>
+												<option th:value="Other" th:text="Other"></option>
+
+
+											</select>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-6">
+										<label for="employeeExperience">Add your Experience</label> <input
+											type="number" class="form-control" id="employeeExperience"
+											name="employeeExperience" th:value="*{employeeExperience}"
+											placeholder="Experience you have" required="required">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-6">
+										<label for="loc">Select Store</label> <select
+											class="form-control" id="storeID" name="storeID"
+											th:field="*{storeID}" required="required"
+											onchange="editEmpProfile(this.value);">
+											<option value="-1">Select Store</option>
+											<option th:each="storeList:${storeList}"
+												th:value="${storeList.storeID}"
+												th:text="${storeList.storeName}" /></option>
+										</select>
+									</div>
+									</div>
+																	<div class="row">
+									
+									<div class="col-md-6">
+										<label for="loc">Select Branch </label> <select
+											class="form-control" id="branchID" name="branchID"
+											th:field="*{branchID}" required="required"
+											onchange="editEmpProfileBranch(this.value);">
+											<option value="-1">Select Branch</option>
+
+											<option th:each="branchList:${branchList}"
+												th:value="${branchList.branchID}"
+												th:text="${branchList.branchName}"></option>
+
+
+
+
+
+										</select>
+									</div>
+								</div>
+								
+								<div class="row">
+<div class="col-md-6">
+										<label for="loc">Select Domain </label> <select
+											class="form-control" id="domainID" name="domainID"
+											th:field="*{domainID}" required="required">
+											<option th:each="domainList:${domainList}"
+												th:value="${domainList.domainID}"
+												th:text="${domainList.domainName}"></option>
+
+										</select>
+										</div>
+									</div>
+																	<div class="row">
+									
+									<div class="col-md-6 col-sm-6">
+									<label for="employeeMobile"></label> <input
+										type="hidden" class="form-control" id="employeePassword"
+										name="employeePassword" th:value="*{employeePassword}"
+										/>
+								</div>
+							</div>
+									
+										
+										<div class="col-md-6 col-sm-6">
+											<label for="employeeCurrentAddress">Enter Current
+												Address</label> <input type="text" class="form-control"
+												id="employeeCurrentAddress" name="employeeCurrentAddress"
+												th:value="*{employeeCurrentAddress}" required="required" />
+										</div>
+										
+										
+										<div class="col-md-6 col-sm-6">
+											<label for="employeePermanentAddress">Enter Permanent
+												Address</label> <input type="text" class="form-control"
+												id="employeePermanentAddress"
+												name="employeePermanentAddress"
+												th:value="*{employeePermanentAddress}" required="required" />
+										</div>
+										
+										<div class="row">
+
+
+
+										<div class="custom-file mb-4">
+											<input type="hidden" id="employeeImage" name="employeeImage"
+												th:value="*{employeeImage}"></input> <input type="file"
+												class="custom-file-input" id="file" name="file"
+												accept="image/png,image/jpng, image/jpg" multiple> <label
+												class="custom-file-label">Choose Image</label>
+										</div>
+									</div>
+									
+									<div class="row">
+
+										<div class="col-md-7">
+											<label for=""></label>
+											<button class="btn btn-danger btn-block"
+												style="color: black;">Update Your Profile</button>
+										</div>
+									</div>
+				
+				</form>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</main>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script src="/js/dropdown.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			var table = $('#example').DataTable();
+			new $.fn.dataTable.FixedHeader(table, {
+				alwaysCloneTop : true
+			});
+		});
+	</script>
+
+</body>
+</html>
+				
+									
+
+
+
+
+
+
+									
+
+
+								
+
+								
+
+
+
+
+
+
+
+									
+								
+									
+								
+
+										
+
+									
+
+									
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

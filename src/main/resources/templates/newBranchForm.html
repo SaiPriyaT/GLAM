@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>GLAM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="#" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/../css/final.css" />
+</head>
+
+
+
+
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header-box">
+				<h4>GLAM</h4>
+				<br>
+				<br> <font size='20' face='Freestyle Script' color='black'><h1
+						th:text="${session.adminObj}"></h1></font> <span><a
+					th:href="@{/adminLogout}">Log Out</a></span>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-2 col-lg-3 col-md-4">
+					<!-- sidebar -->
+				<section class="sidebar">
+						<div class="sidebar-wrap">
+							<div class="Heading">
+								<h4>Dashboard</h4>
+							</div>
+						
+							<div class="sidebar-item">
+								<img src="../images/Icons/store.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/storeList}">Stores</a>
+							</div>
+	<div class="sidebar-item">
+								<img src="../images/Icons/domain.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/domainForm}">Add Domains</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/service.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/service}" class="active">Services</a>
+							</div>
+							
+	<div class="sidebar-item">
+								<img src="../images/Icons/combo.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/combolist}">Combos</a>
+							</div>
+									<div class="sidebar-item">
+								<img src="../images/Icons/news.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/newsdetails}">Latest
+									News</a>
+								<!--/{id}(id=${newsID}) -->
+							</div>
+							<div class="sidebar-item">
+								<img src="../images/Icons/customer.png" alt="icon" class="img-fluid" />
+								<a th:href="@{/customerlist}">customers</a>
+							</div>
+
+							<div class="sidebar-item">
+								<img src="../images/Icons/openings.jpg" alt="icon"
+									class="img-fluid" /> <a th:href="@{/openingsList}">Openings
+									List</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/network}">Social
+									Network</a>
+							</div>
+							<div class="sidebar-item">
+                                <img src="../images/Icons/inventory.png" alt="icon" class="img-fluid" />
+                                <a th:href="@{/productCategoryList}">Inventory</a>
+
+                            </div>
+                            <div class="sidebar-item">
+								<img src="/../../images/Icons/network.png" alt="icon"
+									class="img-fluid" /> <a th:href="@{/vendordetails}">
+									Vendors</a>
+							</div>
+								<div class="sidebar-item">
+								<img src="../images/Icons/aboutus.jpg" alt="icon" class="img-fluid" />
+								<a th:href="@{/about}">About us</a>
+								
+							</div>
+							
+							<!-- <div class="sidebar-item">
+								<img src="../images/Icons/pprofile.png" alt="icon"
+									class="img-fluid" /> <a
+									th:href="@{/adminprof/{id}(id=${session.adminID})}">Admin Profile</a>
+							</div> -->
+
+						</div>
+					</section>
+					<!-- sidebar end -->
+				</div>
+
+
+
+				<div class="col-xl-10 col-lg-9 col-md-8">
+					<div class="main-area">
+						<!-- page Heading -->
+
+						<div class="page-heading">
+							<h1>Enter Branch Details</h1>
+						</div>
+						<hr>
+						<form action="#" th:action="@{/saveBranch}" th:object="${branch}"
+							method="POST">
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl">Branch Name</label> <input type="text"
+										class="form-control" id="branchName" name="branchName"
+										th:value="*{branchName}" required="required" th:minlength="1"
+										th:maxlength="100" placeholder="Branch Name">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl">Branch Address</label> <input
+										type="text" class="form-control" id="branchAddress"
+										name="branchAddress" th:value="*{branchAddress}"
+										required="required" th:minlength="1" th:maxlength="100"
+										placeholder="Branch Address">
+								</div>
+							</div>
+									<div class="row">
+<div class="col-md-6">
+											<label for="loc"> Description</label>
+											<textarea class="form-control" id="description" name="description"
+												th:value="*{description}" required="required" th:minlength="1"
+												th:maxlength="100" th:utext="*{description}"></textarea>
+
+										</div>
+									</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label for="avl"></label> <input type="hidden"
+										class="form-control" id="storeID" name="storeID"
+										th:value="${storeid}" required="required" th:minlength="1"
+										th:maxlength="100" placeholder="Store Id" readonly>
+								</div>
+							</div>
+
+<div class="input-with-icon-left"> <label for="sep">Address latitude</label> <input type="number"
+class="form-control" id="latitude" name="latitude"
+th:value="${latitude}" required="required"
+placeholder="Enter Address latitude">
+</div>
+<div class="input-with-icon-left"> <label for="sep">Address longitude</label> <input type="number"
+class="form-control" id="longitude" name="longitude"
+th:value="${longitude}" required="required"
+placeholder="Enter Address longitude">
+</div><br>
+
+
+							<button class="btn btn-info btn-block" id="ourCare"
+												type="submit" style="color: black">Save
+								Branch</button>
+					</div>
+					</form>
+					<hr>
+
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+	</main>
+	</div>
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<script>
+$(document).ready(function() {
+var table = $('#example').DataTable();
+new $.fn.dataTable.FixedHeader( table, {
+alwaysCloneTop: true
+});
+} );</script>
+
+</body>
+</html>
