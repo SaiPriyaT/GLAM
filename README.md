@@ -1,2 +1,2 @@
 # GLAM
-GLAM repo
+GLAM repo GLAM project updated
